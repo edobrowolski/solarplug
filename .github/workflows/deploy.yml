@@ -24,4 +24,3 @@ jobs:
           sftp_only: true
           args: '-o StrictHostKeyChecking=no'
           delete_remote_files: false
-          exclude: '.git* .github *.docx'
