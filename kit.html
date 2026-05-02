@@ -3,108 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Balcony Solar Kits & Plug-In Solar Products — What's Available Now | YourSolarPlug</title>
-  <meta name="description" content="Compare balcony solar and plug-in solar kits available in 2026. PluggedSolar, Bright Saver, EcoFlow STREAM Ultra balcony power station, and self-sourced options — with honest pricing and what's actually worth buying." />
+  <title>Balcony Solar Kits &amp; Plug-In Solar Products &mdash; What&apos;s Available Now | YourSolarPlug</title>
+  <meta name="description" content="Compare balcony solar and plug-in solar kits available in 2026. PluggedSolar, Bright Saver, EcoFlow STREAM Ultra balcony power station, and self-sourced options with honest pricing." />
   <link rel="canonical" href="https://yoursolarplug.com/kit.html" />
   <style>
-    :root {
-      --sun: #F5A623; --sun-dark: #D4881A; --green: #2E7D32;
-      --navy: #1A2B3C; --slate: #4A5568; --light: #F7F9FC;
-      --white: #FFFFFF; --border: #E2E8F0; --radius: 10px;
-      --shadow: 0 2px 12px rgba(0,0,0,0.08);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--navy); background: var(--white); line-height: 1.6; }
-
-    nav { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
-    .logo { font-size: 1.2rem; font-weight: 700; color: var(--navy); text-decoration: none; }
-    .logo span { color: var(--sun); }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--slate); font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--sun-dark); }
-    .nav-cta { background: var(--sun); color: var(--white) !important; padding: 8px 18px; border-radius: 6px; font-weight: 600 !important; }
-
-    /* HERO */
-    .hero { background: linear-gradient(135deg, #1A2B3C 0%, #2C4A6E 100%); color: var(--white); padding: 80px 24px 90px; text-align: center; }
-    .coming-soon-badge { display: inline-block; background: rgba(245,166,35,0.2); color: var(--sun); border: 1px solid rgba(245,166,35,0.4); padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 24px; letter-spacing: 1px; text-transform: uppercase; }
-    .hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
-    .hero h1 em { color: var(--sun); font-style: normal; }
-    .hero p { font-size: 1.15rem; color: rgba(255,255,255,0.78); max-width: 560px; margin: 0 auto 40px; }
-    .hero-form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
-    .hero-form input[type="email"] { flex: 1; min-width: 220px; padding: 14px 18px; border-radius: 8px; border: none; font-size: 1rem; outline: none; }
-    .hero-form button { background: var(--sun); color: var(--white); border: none; padding: 14px 24px; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
-    .hero-form button:hover { background: var(--sun-dark); }
-    .hero-note { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-top: 12px; }
-
-    section { padding: 68px 24px; }
-    .container { max-width: 1100px; margin: 0 auto; }
-    .section-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sun-dark); margin-bottom: 12px; }
-    h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; margin-bottom: 14px; }
-    .subhead { font-size: 1.05rem; color: var(--slate); max-width: 580px; margin-bottom: 44px; }
-
-    /* COMPONENTS */
-    .component-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-    .component-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
-    .comp-icon { font-size: 2.2rem; margin-bottom: 14px; }
-    .comp-name { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
-    .comp-spec { font-size: 0.82rem; color: var(--sun-dark); font-weight: 600; margin-bottom: 10px; }
-    .comp-desc { font-size: 0.9rem; color: var(--slate); }
-    .comp-price { margin-top: 14px; font-size: 0.85rem; color: var(--slate); }
-    .comp-price strong { color: var(--navy); }
-
-    /* PRICING ESTIMATE */
-    .pricing { background: var(--light); }
-    .price-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); max-width: 520px; margin: 0 auto; overflow: hidden; }
-    .price-header { background: var(--navy); color: var(--white); padding: 24px 28px; }
-    .price-header h3 { font-size: 1.2rem; font-weight: 700; }
-    .price-header .estimate { font-size: 2.2rem; font-weight: 800; color: var(--sun); margin-top: 6px; }
-    .price-header .est-label { font-size: 0.82rem; color: rgba(255,255,255,0.55); }
-    .price-body { padding: 24px 28px; }
-    .price-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.93rem; }
-    .price-row:last-child { border-bottom: none; font-weight: 700; font-size: 1rem; color: var(--navy); padding-top: 14px; }
-    .price-row .item { color: var(--slate); }
-    .price-row .amt { font-weight: 600; color: var(--navy); }
-    .price-note { font-size: 0.82rem; color: var(--slate); margin-top: 16px; text-align: center; }
-
-    /* WHY DIY */
-    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-    @media (max-width: 640px) { .why-grid { grid-template-columns: 1fr; } }
-    .why-col h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
-    .why-col ul { list-style: none; padding: 0; }
-    .why-col li { font-size: 0.93rem; color: var(--slate); padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
-    .why-col li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
-
-    /* AVAILABLE NOW */
-    .available-now { background: var(--navy); color: var(--white); }
-    .available-now h2 { color: var(--white); }
-    .available-now .subhead { color: rgba(255,255,255,0.65); }
-    .avail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .avail-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 24px; }
-    .avail-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--white); }
-    .avail-card p { font-size: 0.88rem; color: rgba(255,255,255,0.65); margin-bottom: 18px; }
-    .avail-card a { display: inline-block; background: var(--sun); color: var(--white); text-decoration: none; padding: 9px 18px; border-radius: 6px; font-size: 0.88rem; font-weight: 700; }
-    .avail-card a:hover { background: var(--sun-dark); }
-
-    footer { background: var(--navy); color: rgba(255,255,255,0.5); text-align: center; padding: 32px 24px; font-size: 0.85rem; }
-    footer a { color: rgba(255,255,255,0.6); text-decoration: none; margin: 0 10px; }
-    footer a:hover { color: var(--sun); }
-    .footer-logo { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
-    .footer-logo span { color: var(--sun); }
-
-    @media (max-width: 640px) { .nav-links { display: none; } }
+    :root { --sun:#F5A623; --sun-dark:#D4881A; --green:#2E7D32; --navy:#1A2B3C; --slate:#4A5568; --light:#F7F9FC; --white:#FFFFFF; --border:#E2E8F0; --radius:10px; --shadow:0 2px 12px rgba(0,0,0,0.08); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; color:var(--navy); background:var(--white); line-height:1.6; }
+    nav { background:var(--white); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:100; }
+    .nav-inner { max-width:1100px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:60px; }
+    .logo { font-size:1.2rem; font-weight:700; color:var(--navy); text-decoration:none; }
+    .logo span { color:var(--sun); }
+    .nav-links { display:flex; gap:28px; list-style:none; }
+    .nav-links a { text-decoration:none; color:var(--slate); font-size:0.95rem; font-weight:500; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--sun-dark); }
+    .nav-cta { background:var(--sun); color:var(--white) !important; padding:8px 18px; border-radius:6px; font-weight:600 !important; }
+    .hero { background:linear-gradient(135deg,#1A2B3C 0%,#2C4A6E 100%); color:var(--white); padding:80px 24px 90px; text-align:center; }
+    .coming-soon-badge { display:inline-block; background:rgba(245,166,35,0.2); color:var(--sun); border:1px solid rgba(245,166,35,0.4); padding:5px 14px; border-radius:20px; font-size:0.85rem; font-weight:700; margin-bottom:24px; letter-spacing:1px; text-transform:uppercase; }
+    .hero h1 { font-size:clamp(2rem,4vw,3rem); font-weight:800; margin-bottom:16px; line-height:1.2; }
+    .hero h1 em { color:var(--sun); font-style:normal; }
+    .hero p { font-size:1.15rem; color:rgba(255,255,255,0.78); max-width:560px; margin:0 auto 40px; }
+    .hero-form { display:flex; gap:10px; max-width:460px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
+    .hero-form input[type="email"] { flex:1; min-width:220px; padding:14px 18px; border-radius:8px; border:none; font-size:1rem; outline:none; }
+    .hero-form button { background:var(--sun); color:var(--white); border:none; padding:14px 24px; border-radius:8px; font-size:1rem; font-weight:700; cursor:pointer; transition:background 0.2s; white-space:nowrap; }
+    .hero-form button:hover { background:var(--sun-dark); }
+    .hero-note { font-size:0.82rem; color:rgba(255,255,255,0.45); margin-top:12px; }
+    section { padding:68px 24px; }
+    .container { max-width:1100px; margin:0 auto; }
+    .section-label { font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--sun-dark); margin-bottom:12px; }
+    h2 { font-size:clamp(1.5rem,3vw,2rem); font-weight:800; margin-bottom:14px; }
+    .subhead { font-size:1.05rem; color:var(--slate); max-width:580px; margin-bottom:44px; }
+    .component-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; }
+    .component-card { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); }
+    .comp-icon { font-size:2.2rem; margin-bottom:14px; }
+    .comp-name { font-size:1rem; font-weight:700; margin-bottom:4px; }
+    .comp-spec { font-size:0.82rem; color:var(--sun-dark); font-weight:600; margin-bottom:10px; }
+    .comp-desc { font-size:0.9rem; color:var(--slate); }
+    .comp-price { margin-top:14px; font-size:0.85rem; color:var(--slate); }
+    .comp-price strong { color:var(--navy); }
+    .pricing { background:var(--light); }
+    .price-card { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); max-width:520px; margin:0 auto; overflow:hidden; }
+    .price-header { background:var(--navy); color:var(--white); padding:24px 28px; }
+    .price-header h3 { font-size:1.2rem; font-weight:700; }
+    .price-header .estimate { font-size:2.2rem; font-weight:800; color:var(--sun); margin-top:6px; }
+    .price-header .est-label { font-size:0.82rem; color:rgba(255,255,255,0.55); }
+    .price-body { padding:24px 28px; }
+    .price-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border); font-size:0.93rem; }
+    .price-row:last-child { border-bottom:none; font-weight:700; font-size:1rem; color:var(--navy); padding-top:14px; }
+    .price-row .item { color:var(--slate); }
+    .price-row .amt { font-weight:600; color:var(--navy); }
+    .price-note { font-size:0.82rem; color:var(--slate); margin-top:16px; text-align:center; }
+    .why-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+    .why-col h3 { font-size:1rem; font-weight:700; margin-bottom:12px; }
+    .why-col ul { list-style:none; padding:0; }
+    .why-col li { font-size:0.93rem; color:var(--slate); padding:8px 0; border-bottom:1px solid var(--border); display:flex; gap:10px; }
+    .why-col li::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; }
+    .available-now { background:var(--navy); color:var(--white); }
+    .available-now h2 { color:var(--white); }
+    .available-now .subhead { color:rgba(255,255,255,0.65); }
+    .avail-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+    .avail-card { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); padding:24px; }
+    .avail-card h3 { font-size:1rem; font-weight:700; margin-bottom:8px; color:var(--white); }
+    .avail-card p { font-size:0.88rem; color:rgba(255,255,255,0.65); margin-bottom:18px; }
+    .avail-card a { display:inline-block; background:var(--sun); color:var(--white); text-decoration:none; padding:9px 18px; border-radius:6px; font-size:0.88rem; font-weight:700; }
+    .avail-card a:hover { background:var(--sun-dark); }
+    .battery-section { background:var(--light); }
+    .battery-callout { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); }
+    .battery-callout h3 { font-size:1.05rem; font-weight:700; margin-bottom:10px; }
+    .battery-callout p { font-size:0.92rem; color:var(--slate); margin-bottom:12px; }
+    .battery-callout p:last-child { margin-bottom:0; }
+    .cta-strip { text-align:center; padding:72px 24px; }
+    .cta-strip h2 { margin-bottom:14px; }
+    .cta-strip p { font-size:1.05rem; color:var(--slate); max-width:500px; margin:0 auto 32px; }
+    .cta-form { display:flex; gap:10px; max-width:440px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
+    .cta-form input[type="email"] { flex:1; min-width:200px; padding:13px 16px; border-radius:8px; border:2px solid var(--border); font-size:1rem; outline:none; }
+    .cta-form button { background:var(--sun); color:var(--white); border:none; padding:13px 22px; border-radius:8px; font-size:1rem; font-weight:700; cursor:pointer; }
+    footer { background:var(--navy); color:rgba(255,255,255,0.5); text-align:center; padding:32px 24px; font-size:0.85rem; }
+    footer a { color:rgba(255,255,255,0.6); text-decoration:none; margin:0 10px; }
+    footer a:hover { color:var(--sun); }
+    .footer-logo { font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:10px; }
+    .footer-logo span { color:var(--sun); }
+    @media (max-width:640px) { .nav-links { display:none; } .why-grid { grid-template-columns:1fr; } }
   </style>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCRNQFDZJ2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZCRNQFDZJ2');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZCRNQFDZJ2');</script>
 </head>
 <body>
-
+<iframe name="brevo-hidden" style="display:none;" aria-hidden="true" tabindex="-1"></iframe>
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo">Your<span>Solar</span>Plug</a>
@@ -116,136 +101,126 @@
     </ul>
   </div>
 </nav>
-
-<!-- HERO -->
 <section class="hero">
-  <div class="coming-soon-badge">🔧 Balcony Solar & Plug-In Kits</div>
-  <h1>What's available in<br/><em>balcony solar</em> right now</h1>
-  <p>The plug-in solar market is young and moving fast. We track what's actually worth buying for renters and homeowners, flag what's missing, and keep the newsletter updated as new options come to market.</p>
-  <form class="hero-form" onsubmit="handleSubmit(event)">
-    <input type="email" placeholder="your@email.com" required />
-    <button type="submit">Join the Newsletter →</button>
+  <div class="coming-soon-badge">&#128295; Balcony Solar &amp; Plug-In Kits</div>
+  <h1>What&apos;s available in<br/><em>balcony solar</em> right now</h1>
+  <p>The plug-in solar market is young and moving fast. We track what&apos;s actually worth buying for renters and homeowners, flag what&apos;s missing, and keep the newsletter updated as new options come to market.</p>
+  <form class="hero-form" action="https://9fab9952.sibforms.com/serve/MUIFAHMojyBzq13eTuncyudotUjTjx7XUafDYZL7m4iNeLON5qOBWkB_3RUNxLfir_qz6KgYZMXeDwYdDCk-8ON-FC3__pz2xthRhtHrsdK7bOBLpHbBd7Sy453R2Ptqv3tUBrjaKK6vMf6f98DYnShmJdlmWPrG6aw4KKrS05scvpWW5h61J-uF2ufe-1eW3ySaBIgujcgyZ6Zgyw==" method="POST" target="brevo-hidden">
+    <input type="email" name="EMAIL" placeholder="your@email.com" required />
+    <button type="submit">Join the Newsletter &rarr;</button>
+        <input type="text" name="email_address_check" value="" style="display:none;" aria-hidden="true" tabindex="-1">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
   </form>
-  <div class="hero-note">New products, law updates, and honest takes — delivered when there's something worth saying.</div>
+  <div class="hero-note">New products, law updates, and honest takes &mdash; delivered when there&apos;s something worth saying.</div>
 </section>
-
-<!-- COMPONENTS -->
 <section>
   <div class="container">
     <div class="section-label">What goes into a system</div>
     <h2>The four components every system needs</h2>
-    <p class="subhead">Whether you buy a bundled kit or source your own, every plug-in solar setup has the same four pieces. Here's what each one does.</p>
+    <p class="subhead">Whether you buy a bundled kit or source your own, every plug-in solar setup has the same four pieces.</p>
     <div class="component-grid">
-      <div class="component-card">
-        <div class="comp-icon">☀️</div>
-        <div class="comp-name">Solar Panels</div>
-        <div class="comp-spec">Typically 250W–400W per panel</div>
-        <p class="comp-desc">250W panels are easier to handle, ship cheaper, and are a good starting point. 400W panels generate more per unit but are larger and heavier. Panel prices vary significantly — check current market pricing before buying, as this is one of the most volatile cost inputs in any system.</p>
-        <div class="comp-price">Price varies — check current listings before assuming any figure</div>
-      </div>
-      <div class="component-card">
-        <div class="comp-icon">⚡</div>
-        <div class="comp-name">Microinverter</div>
-        <div class="comp-spec">Typically $150–$300; UL 1741 certified</div>
-        <p class="comp-desc">Converts DC power from your panels into AC electricity your home can use. The APsystems EZ1-M is the most widely used US model (~$150–$180). The EcoFlow STREAM is a newer alternative at ~$299 that integrates with EcoFlow's battery ecosystem. Look for UL 1741 certification and built-in WiFi monitoring.</p>
-        <div class="comp-price">Est. cost: <strong>$150–$300 depending on model</strong></div>
-      </div>
-      <div class="component-card">
-        <div class="comp-icon">🔗</div>
-        <div class="comp-name">MC4 DC Cables</div>
-        <div class="comp-spec">10 AWG, weatherproof, pre-terminated</div>
-        <p class="comp-desc">The cables that connect your panels to the microinverter. Pre-terminated with MC4 connectors — no splicing required, just click them in. Rated for outdoor UV exposure.</p>
-        <div class="comp-price">Est. cost: <strong>$20–$30</strong></div>
-      </div>
-      <div class="component-card">
-        <div class="comp-icon">🔌</div>
-        <div class="comp-name">Feed-In Safety Plug Cord</div>
-        <div class="comp-spec">NEMA 5-15, with safety interlock</div>
-        <p class="comp-desc">The cord that connects the microinverter output to your wall outlet. Uses a safety plug design with a physical interlock that prevents the cord from being live when unplugged. Required by law in several states.</p>
-        <div class="comp-price">Est. cost: <strong>$25–$40</strong></div>
-      </div>
+      <div class="component-card"><div class="comp-icon">&#9728;&#65039;</div><div class="comp-name">Solar Panels</div><div class="comp-spec">Typically 250W&ndash;400W per panel</div><p class="comp-desc">250W panels are easier to handle and ship cheaper. 400W panels generate more per unit but are larger. Panel prices vary significantly &mdash; check current market pricing before buying.</p><div class="comp-price">Price varies &mdash; check current listings before assuming any figure</div></div>
+      <div class="component-card"><div class="comp-icon">&#9889;</div><div class="comp-name">Microinverter</div><div class="comp-spec">Typically $150&ndash;$300; UL 1741 certified</div><p class="comp-desc">Converts DC power from your panels into AC electricity your home can use. The APsystems EZ1-M is the most widely used US model (~$150&ndash;$180). The EcoFlow STREAM is a newer alternative at ~$299. Look for UL 1741 certification and built-in WiFi monitoring.</p><div class="comp-price">Est. cost: <strong>$150&ndash;$300 depending on model</strong></div></div>
+      <div class="component-card"><div class="comp-icon">&#128279;</div><div class="comp-name">MC4 DC Cables</div><div class="comp-spec">10 AWG, weatherproof, pre-terminated</div><p class="comp-desc">The cables that connect your panels to the microinverter. Pre-terminated with MC4 connectors &mdash; no splicing required. Rated for outdoor UV exposure.</p><div class="comp-price">Est. cost: <strong>$20&ndash;$30</strong></div></div>
+      <div class="component-card"><div class="comp-icon">&#128268;</div><div class="comp-name">Feed-In Safety Plug Cord</div><div class="comp-spec">NEMA 5-15, with safety interlock</div><p class="comp-desc">The cord that connects the microinverter output to your wall outlet. Uses a safety plug design with a physical interlock. Required by law in several states.</p><div class="comp-price">Est. cost: <strong>$25&ndash;$40</strong></div></div>
     </div>
   </div>
 </section>
-
-<!-- HONEST PRICING CONTEXT -->
 <section class="pricing">
   <div class="container">
     <div class="section-label">A note on pricing</div>
     <h2>What does a system actually cost?</h2>
-    <p class="subhead">The honest answer: it depends a lot on where you buy and when. Here's how to think about it.</p>
+    <p class="subhead">The honest answer: it depends a lot on where you buy and when.</p>
     <div class="price-card">
-      <div class="price-header">
-        <h3>The real picture</h3>
-        <div class="estimate">$500–$1,500+</div>
-        <div class="est-label">Typical all-in range · Varies widely by configuration</div>
-      </div>
+      <div class="price-header"><h3>The real picture</h3><div class="estimate">$500&ndash;$1,500+</div><div class="est-label">Typical all-in range &middot; Varies widely by configuration</div></div>
       <div class="price-body">
         <div class="price-row"><span class="item">Panels (biggest variable)</span><span class="amt">Check current market pricing</span></div>
-        <div class="price-row"><span class="item">Microinverter (APsystems EZ1-M or EcoFlow STREAM)</span><span class="amt">~$150–$300</span></div>
-        <div class="price-row"><span class="item">Cables, plug cord, connectors</span><span class="amt">~$40–$70</span></div>
-        <div class="price-row"><span class="item">Mounting hardware</span><span class="amt">~$30–$100+ (varies a lot)</span></div>
-        <div class="price-row"><span class="item">Bundled kits (all-in)</span><span class="amt">$900–$2,500 from established sellers</span></div>
+        <div class="price-row"><span class="item">Microinverter (APsystems EZ1-M or EcoFlow STREAM)</span><span class="amt">~$150&ndash;$300</span></div>
+        <div class="price-row"><span class="item">Cables, plug cord, connectors</span><span class="amt">~$40&ndash;$70</span></div>
+        <div class="price-row"><span class="item">Mounting hardware</span><span class="amt">~$30&ndash;$100+ (varies)</span></div>
+        <div class="price-row"><span class="item">Bundled kits (all-in)</span><span class="amt">$900&ndash;$2,500 from established sellers</span></div>
       </div>
-      <div class="price-note">Panel prices are the most volatile input. New 400W panels currently run $150–$200+; secondhand bifacial panels can be found for less on OfferUp and Facebook Marketplace. Don't anchor to any single price estimate you read online — check current listings.</div>
+      <div class="price-note">Panel prices are the most volatile input. New 400W panels currently run $150&ndash;$200+; secondhand bifacial panels can be found for less on OfferUp and Facebook Marketplace.</div>
     </div>
   </div>
 </section>
-
-<!-- BUNDLED VS SELF-SOURCED -->
 <section>
   <div class="container">
     <div class="section-label">How to buy</div>
     <h2>Bundled kit vs. sourcing your own</h2>
-    <p class="subhead">Two approaches, each with real tradeoffs. Neither is obviously better for everyone.</p>
+    <p class="subhead">Two approaches, each with real tradeoffs.</p>
     <div class="why-grid">
       <div class="why-col">
-        <h3>✅ Bundled kit (e.g. PluggedSolar, Bright Saver)</h3>
+        <h3>&#9989; Bundled kit (e.g. PluggedSolar, Bright Saver)</h3>
         <ul>
           <li>Everything arrives together, designed to work as a system</li>
-          <li>Less research required — components are already matched</li>
+          <li>Less research required &mdash; components are already matched</li>
           <li>Usually includes some form of customer support</li>
           <li>You know the total cost upfront, including shipping</li>
           <li>Higher per-watt cost than self-sourcing in most cases</li>
         </ul>
       </div>
       <div class="why-col">
-        <h3>🟡 Self-sourced components</h3>
+        <h3>&#129505; Self-sourced components</h3>
         <ul>
           <li>Potentially lower cost, especially if you find panels secondhand</li>
-          <li>More flexibility — choose panel size based on your space</li>
+          <li>More flexibility &mdash; choose panel size based on your space</li>
           <li>Requires more research to ensure component compatibility</li>
           <li>Shipping panels separately adds cost and complexity</li>
-          <li>No bundled support if something doesn't work</li>
+          <li>No bundled support if something doesn&apos;t work</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
-
-<!-- AVAILABLE NOW -->
 <section class="available-now">
   <div class="container">
-    <div class="section-label" style="color:var(--sun);">Can't wait?</div>
-    <h2>These kits are available right now</h2>
-    <p class="subhead">Our kit is still in development. If you're ready to buy today, these are the products we'd point you toward.</p>
+    <div class="section-label" style="color:var(--sun);">Available now</div>
+    <h2>Plug-in solar kits you can buy today</h2>
+    <p class="subhead">These are the products we&apos;d point renters and homeowners toward right now.</p>
     <div class="avail-grid">
-      <div class="avail-card">
-        <h3>PluggedSolar 800W Kit</h3>
-        <p>Amazon-distributed, UL 1741 certified. Four 200W panels, EZ1 inverter, WiFi monitoring. Ships to most US states. Good turnkey option.</p>
-        <a href="https://www.pluggedsolar.com" target="_blank" rel="noopener">Shop PluggedSolar →</a>
-      </div>
-      <div class="avail-card">
-        <h3>Bright Saver Kits</h3>
-        <p>SF-based nonprofit focused on clean energy access. California-focused. Their kits include 250W and 400W panel configurations — the 4×250W setup is practical for people with limited space or who want easier handling. Check their site for current availability.</p>
-        <a href="https://www.brightsaver.org" target="_blank" rel="noopener">See Bright Saver Kits →</a>
-      </div>
-      <div class="avail-card">
-        <h3>Build your own on Amazon</h3>
-        <p>The APsystems EZ1-M inverter, 400W panels, and MC4 cables are all available individually on Amazon. More research required, but it works.</p>
-        <a href="https://www.amazon.com/s?k=APsystems+EZ1+microinverter" target="_blank" rel="noopener">Search Amazon →</a>
-      </div>
-      <div class="avail-card">
-        <h3>EcoFlow STREAM Ultra</h3>
-        <p>The most advanced balcony power station on the market. Combines a microinverter and 1.92kWh LFP battery in one unit. Up to 1,200W output, expandable to 11.52kWh, with two dedicated outlets you can plug devices into directly. Powers your home during the day and draws down the battery at night. Around $1,459 — a fundamentally different product than a basic plug-in kit.</p>
-        <a href="https://u
+      <div class="avail-card"><h3>PluggedSolar 800W Kit</h3><p>Amazon-distributed, UL 1741 certified. Four 200W panels, EZ1 inverter, WiFi monitoring. Ships to most US states. Good turnkey option for apartment solar or backyard installs.</p><a href="https://www.pluggedsolar.com" target="_blank" rel="noopener">Shop PluggedSolar &rarr;</a></div>
+      <div class="avail-card"><h3>Bright Saver Kits</h3><p>SF-based nonprofit focused on clean energy access. California-focused. Their kits include 250W and 400W panel configurations. Check their site for current availability.</p><a href="https://www.brightsaver.org" target="_blank" rel="noopener">See Bright Saver Kits &rarr;</a></div>
+      <div class="avail-card"><h3>Build your own on Amazon</h3><p>The APsystems EZ1-M inverter, 400W panels, and MC4 cables are all available individually. More research required, but it works and can be cheaper.</p><a href="https://www.amazon.com/s?k=APsystems+EZ1+microinverter" target="_blank" rel="noopener">Search Amazon &rarr;</a></div>
+      <div class="avail-card"><h3>EcoFlow STREAM Ultra</h3><p>The most advanced balcony power station on the market. Combines a microinverter and 1.92kWh LFP battery in one unit. Up to 1,200W output, expandable to 11.52kWh, with two dedicated outlets you can plug devices into directly. Around $1,459 &mdash; a fundamentally different product than a basic plug-in kit.</p><a href="https://us.ecoflow.com/products/stream-ultra" target="_blank" rel="noopener">See EcoFlow STREAM Ultra &rarr;</a></div>
+    </div>
+  </div>
+</section>
+<section class="cta-strip">
+  <div class="container">
+    <h2>Stay updated on what&apos;s worth buying</h2>
+    <p>The balcony solar market moves fast. We track new products, price changes, and honest takes on what&apos;s actually worth it.</p>
+    <form class="cta-form" action="https://9fab9952.sibforms.com/serve/MUIFAHMojyBzq13eTuncyudotUjTjx7XUafDYZL7m4iNeLON5qOBWkB_3RUNxLfir_qz6KgYZMXeDwYdDCk-8ON-FC3__pz2xthRhtHrsdK7bOBLpHbBd7Sy453R2Ptqv3tUBrjaKK6vMf6f98DYnShmJdlmWPrG6aw4KKrS05scvpWW5h61J-uF2ufe-1eW3ySaBIgujcgyZ6Zgyw==" method="POST" target="brevo-hidden">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required />
+      <button type="submit">Join the Newsletter &rarr;</button>
+        <input type="text" name="email_address_check" value="" style="display:none;" aria-hidden="true" tabindex="-1">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
+    </form>
+  </div>
+</section>
+<footer>
+  <div class="footer-logo">Your<span>Solar</span>Plug</div>
+  <div style="margin-bottom:12px;">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="state-tracker.html">State Tracker</a>
+    <a href="kit.html">Products</a>
+  </div>
+  <p>&copy; 2026 YourSolarPlug.com &mdash; Information is provided for educational purposes only.<br/>Laws change. Always verify current status with your state legislature or a local attorney.</p>
+</footer>
+<script>
+  document.querySelectorAll('form[target="brevo-hidden"]').forEach(function(form) {
+    form.addEventListener('submit', function() {
+      var btn = this.querySelector('button[type="submit"]');
+      var input = this.querySelector('input[type="email"]');
+      setTimeout(function() {
+        if (btn) { btn.textContent = "You\'re on the list!"; btn.style.background = '#2E7D32'; btn.disabled = true; }
+        if (input) input.disabled = true;
+      }, 600);
+    });
+  });
+</script>
+</body>
+</html>

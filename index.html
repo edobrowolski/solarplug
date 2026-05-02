@@ -3,27 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Solar Plug — Balcony Solar & Plug-In Solar for Every Home</title>
-  <meta name="description" content="Balcony solar and plug-in solar let you generate your own electricity from a balcony, patio, or backyard — no roof, no contractor, no permit. Perfect for renters and homeowners. Track US state laws and find kits available now." />
+  <title>Your Solar Plug &mdash; Balcony Solar &amp; Plug-In Solar for Every Home</title>
+  <meta name="description" content="Balcony solar and plug-in solar let you generate your own electricity from a balcony, patio, or backyard &mdash; no roof, no contractor, no permit. Perfect for renters and homeowners. Track US state laws and find kits available now." />
   <link rel="canonical" href="https://yoursolarplug.com/" />
   <style>
     :root {
-      --sun: #F5A623;
-      --sun-dark: #D4881A;
-      --green: #2E7D32;
-      --green-light: #4CAF50;
-      --navy: #1A2B3C;
-      --slate: #4A5568;
-      --light: #F7F9FC;
-      --white: #FFFFFF;
-      --border: #E2E8F0;
-      --radius: 10px;
+      --sun: #F5A623; --sun-dark: #D4881A; --green: #2E7D32; --green-light: #4CAF50;
+      --navy: #1A2B3C; --slate: #4A5568; --light: #F7F9FC;
+      --white: #FFFFFF; --border: #E2E8F0; --radius: 10px;
       --shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--navy); background: var(--white); line-height: 1.6; }
-
-    /* NAV */
     nav { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
     .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
     .logo { font-size: 1.2rem; font-weight: 700; color: var(--navy); text-decoration: none; }
@@ -33,8 +24,6 @@
     .nav-links a:hover { color: var(--sun-dark); }
     .nav-cta { background: var(--sun); color: var(--white) !important; padding: 8px 18px; border-radius: 6px; font-weight: 600 !important; }
     .nav-cta:hover { background: var(--sun-dark); color: var(--white) !important; }
-
-    /* HERO */
     .hero { background: linear-gradient(135deg, #1A2B3C 0%, #2C4A6E 100%); color: var(--white); padding: 80px 24px 90px; text-align: center; }
     .hero-badge { display: inline-block; background: rgba(245,166,35,0.2); color: var(--sun); border: 1px solid rgba(245,166,35,0.4); padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; letter-spacing: 0.5px; }
     .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.2; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
@@ -49,31 +38,23 @@
     .hero-stat { text-align: center; }
     .hero-stat .num { font-size: 1.8rem; font-weight: 800; color: var(--sun); }
     .hero-stat .label { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
-
-    /* SECTION BASE */
     section { padding: 72px 24px; }
     .container { max-width: 1100px; margin: 0 auto; }
     .section-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sun-dark); margin-bottom: 12px; }
     h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; line-height: 1.25; margin-bottom: 16px; }
     .subhead { font-size: 1.1rem; color: var(--slate); max-width: 580px; margin-bottom: 48px; }
-
-    /* WHAT IS IT */
     .what { background: var(--light); }
     .what-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
     .what-card { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
     .what-card .icon { font-size: 2rem; margin-bottom: 14px; }
     .what-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
     .what-card p { font-size: 0.95rem; color: var(--slate); }
-
-    /* HOW IT WORKS */
     .steps { display: flex; gap: 0; counter-reset: steps; flex-wrap: wrap; }
     .step { flex: 1; min-width: 200px; position: relative; padding: 0 24px 0 0; }
     .step:not(:last-child)::after { content: '→'; position: absolute; right: 4px; top: 16px; color: var(--border); font-size: 1.4rem; }
     .step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--sun); color: var(--white); font-weight: 800; font-size: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
     .step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
     .step p { font-size: 0.9rem; color: var(--slate); }
-
-    /* STATE PREVIEW */
     .states-preview { background: var(--navy); color: var(--white); }
     .states-preview h2 { color: var(--white); }
     .states-preview .subhead { color: rgba(255,255,255,0.65); }
@@ -85,8 +66,6 @@
     .pill.gray { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.55); border: 1px solid rgba(255,255,255,0.12); }
     .states-cta { display: inline-block; background: var(--sun); color: var(--white); text-decoration: none; padding: 13px 28px; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: background 0.2s; }
     .states-cta:hover { background: var(--sun-dark); }
-
-    /* REFERRALS */
     .referrals { background: var(--light); }
     .referral-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
     .referral-card { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
@@ -97,8 +76,6 @@
     .referral-tag { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-bottom: 12px; }
     .tag-plugin { background: #E3F2FD; color: #1565C0; }
     .tag-full { background: #E8F5E9; color: #2E7D32; }
-
-    /* BOTTOM CTA */
     .bottom-cta { text-align: center; padding: 80px 24px; }
     .bottom-cta h2 { margin-bottom: 14px; }
     .bottom-cta p { font-size: 1.1rem; color: var(--slate); max-width: 520px; margin: 0 auto 36px; }
@@ -107,15 +84,11 @@
     .bottom-form input[type="email"]:focus { border-color: var(--sun); }
     .bottom-form button { background: var(--sun); color: var(--white); border: none; padding: 13px 22px; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
     .bottom-form button:hover { background: var(--sun-dark); }
-
-    /* FOOTER */
     footer { background: var(--navy); color: rgba(255,255,255,0.5); text-align: center; padding: 32px 24px; font-size: 0.85rem; }
     footer a { color: rgba(255,255,255,0.6); text-decoration: none; margin: 0 10px; }
     footer a:hover { color: var(--sun); }
     .footer-logo { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
     .footer-logo span { color: var(--sun); }
-
-    /* RESPONSIVE */
     @media (max-width: 640px) {
       .nav-links { display: none; }
       .steps { flex-direction: column; }
@@ -123,18 +96,11 @@
       .hero-stats { gap: 24px; }
     }
   </style>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCRNQFDZJ2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZCRNQFDZJ2');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZCRNQFDZJ2');</script>
 </head>
 <body>
-
-<!-- NAV -->
+<iframe name="brevo-hidden" style="display:none;" aria-hidden="true" tabindex="-1"></iframe>
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo">Your<span>Solar</span>Plug</a>
@@ -146,17 +112,18 @@
     </ul>
   </div>
 </nav>
-
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">🔌 New regulations are changing everything in 2026</div>
+  <div class="hero-badge">&#128268; New regulations are changing everything in 2026</div>
   <h1>Solar power. No roof,<br/>no contractor, no permit.<br/><em>Just plug it in.</em></h1>
-  <p>Plug-in solar — also called balcony solar or plug-and-play solar — lets you generate your own electricity and lower your bill from a balcony, backyard, or patio. No roof required. Works for renters and homeowners alike. And new regulations are taking shape across the US right now.</p>
-  <form class="hero-form" id="newsletter" onsubmit="handleSubmit(event)">
-    <input type="email" placeholder="your@email.com" required />
-    <button type="submit">Join the Newsletter →</button>
+  <p>Plug-in solar &mdash; also called balcony solar or plug-and-play solar &mdash; lets you generate your own electricity and lower your bill from a balcony, backyard, or patio. No roof required. Works for renters and homeowners alike. And new regulations are taking shape across the US right now.</p>
+  <form class="hero-form" id="newsletter" action="https://9fab9952.sibforms.com/serve/MUIFAHMojyBzq13eTuncyudotUjTjx7XUafDYZL7m4iNeLON5qOBWkB_3RUNxLfir_qz6KgYZMXeDwYdDCk-8ON-FC3__pz2xthRhtHrsdK7bOBLpHbBd7Sy453R2Ptqv3tUBrjaKK6vMf6f98DYnShmJdlmWPrG6aw4KKrS05scvpWW5h61J-uF2ufe-1eW3ySaBIgujcgyZ6Zgyw==" method="POST" target="brevo-hidden">
+    <input type="email" name="EMAIL" placeholder="your@email.com" required />
+    <button type="submit">Join the Newsletter &rarr;</button>
+        <input type="text" name="email_address_check" value="" style="display:none;" aria-hidden="true" tabindex="-1">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
   </form>
-  <div class="hero-note">New regulations, tips and tricks, available products, and what's worth buying as the market develops. Unsubscribe anytime.</div>
+  <div class="hero-note">New regulations, tips and tricks, available products, and what&apos;s worth buying as the market develops. Unsubscribe anytime.</div>
   <div class="hero-stats">
     <div class="hero-stat"><div class="num">3</div><div class="label">States with laws passed</div></div>
     <div class="hero-stat"><div class="num">27+</div><div class="label">Bills introduced in 2026</div></div>
@@ -164,146 +131,112 @@
     <div class="hero-stat"><div class="num">$400</div><div class="label">Typical starter kit cost</div></div>
   </div>
 </section>
-
-<!-- WHAT IS IT -->
 <section class="what">
   <div class="container">
     <div class="section-label">The basics</div>
     <h2>What is balcony solar (plug-in solar), exactly?</h2>
-    <p class="subhead">It's a small solar system you can set up yourself in an afternoon — no electrician, no utility approval, no roof required. Popular in Europe as "balcony solar," it's now catching on fast in the US.</p>
+    <p class="subhead">It&apos;s a small solar system you can set up yourself in an afternoon &mdash; no electrician, no utility approval, no roof required. Popular in Europe as &ldquo;balcony solar,&rdquo; it&apos;s now catching on fast in the US.</p>
     <div class="what-grid">
-      <div class="what-card">
-        <div class="icon">☀️</div>
-        <h3>Solar panels on your terms</h3>
-        <p>One or two panels — usually 400W each — sit on your balcony railing, lean against a wall, or lay in your backyard. Wherever gets sun.</p>
-      </div>
-      <div class="what-card">
-        <div class="icon">⚡</div>
-        <h3>A microinverter does the work</h3>
-        <p>A small device (like the APsystems EZ1) converts the panel's DC power into regular AC electricity your home can use.</p>
-      </div>
-      <div class="what-card">
-        <div class="icon">🔌</div>
-        <h3>Plug into a standard outlet</h3>
-        <p>A special safety cable connects the microinverter to your wall outlet. Power flows into your home's circuit and offsets whatever you're drawing from the grid.</p>
-      </div>
-      <div class="what-card">
-        <div class="icon">📉</div>
-        <h3>Your meter actually goes down</h3>
-        <p>Every watt you generate is a watt you don't buy. An 800W balcony solar system can realistically cut $20–$50/month off your electric bill, depending on your rates and sunlight.</p>
-      </div>
+      <div class="what-card"><div class="icon">&#9728;&#65039;</div><h3>Solar panels on your terms</h3><p>One or two panels &mdash; usually 400W each &mdash; sit on your balcony railing, lean against a wall, or lay in your backyard. Wherever gets sun.</p></div>
+      <div class="what-card"><div class="icon">&#9889;</div><h3>A microinverter does the work</h3><p>A small device (like the APsystems EZ1) converts the panel&apos;s DC power into regular AC electricity your home can use.</p></div>
+      <div class="what-card"><div class="icon">&#128268;</div><h3>Plug into a standard outlet</h3><p>A special safety cable connects the microinverter to your wall outlet. Power flows into your home&apos;s circuit and offsets whatever you&apos;re drawing from the grid.</p></div>
+      <div class="what-card"><div class="icon">&#128201;</div><h3>Your meter actually goes down</h3><p>Every watt you generate is a watt you don&apos;t buy. An 800W balcony solar system can realistically cut $20&ndash;$50/month off your electric bill, depending on your rates and sunlight.</p></div>
     </div>
   </div>
 </section>
-
-<!-- HOW IT WORKS -->
 <section>
   <div class="container">
     <div class="section-label">Setup in four steps</div>
     <h2>How it works</h2>
     <p class="subhead">The whole system takes a few hours to set up. If you can hang a TV mount, you can do this.</p>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Buy a kit</h3>
-        <p>Panel(s) + microinverter + cables + plug cord. A few companies sell these bundled. Or build your own from components.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Mount your panels</h3>
-        <p>Balcony railing, roof edge, ground mount, or window sill. Wherever you've got unshaded sun for most of the day.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Connect the inverter</h3>
-        <p>Cables from panel to microinverter. Takes five minutes. No tools required beyond a hand tightening.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h3>Plug it in</h3>
-        <p>The inverter's output cord goes into your nearest outlet. Your home immediately starts using the solar power you're generating.</p>
-      </div>
+      <div class="step"><div class="step-num">1</div><h3>Buy a kit</h3><p>Panel(s) + microinverter + cables + plug cord. A few companies sell these bundled. Or build your own from components.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Mount your panels</h3><p>Balcony railing, roof edge, ground mount, or window sill. Wherever you&apos;ve got unshaded sun for most of the day.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Connect the inverter</h3><p>Cables from panel to microinverter. Takes five minutes. No tools required beyond hand tightening.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Plug it in</h3><p>The inverter&apos;s output cord goes into your nearest outlet. Your home immediately starts using the solar power you&apos;re generating.</p></div>
     </div>
-    <p style="margin-top: 40px;"><a href="how-it-works.html" style="color: var(--sun-dark); font-weight: 600; text-decoration: none;">Full explainer, FAQ, and payback math →</a></p>
+    <p style="margin-top:40px;"><a href="how-it-works.html" style="color:var(--sun-dark);font-weight:600;text-decoration:none;">Full explainer, FAQ, and payback math &rarr;</a></p>
   </div>
 </section>
-
-<!-- STATE PREVIEW -->
 <section class="states-preview">
   <div class="container">
-    <div class="section-label" style="color: var(--sun);">Legislation tracker</div>
+    <div class="section-label" style="color:var(--sun);">Legislation tracker</div>
     <h2>Where is balcony solar and plug-in solar authorized?</h2>
     <p class="subhead">The legislative picture is changing fast. Three states have passed plug-in solar laws as of mid-2026, with dozens more bills in progress.</p>
     <div class="state-pills">
-      <span class="pill legal">✅ Utah — Law Passed</span>
-      <span class="pill legal">✅ Virginia — Law Passed (July 2026)</span>
-      <span class="pill legal">✅ Maine — Law Passed (July 2026)</span>
-      <span class="pill pending">🟡 Colorado — Senate Pending</span>
-      <span class="pill pending">🟡 California — Committee Passed</span>
-      <span class="pill failed">❌ Oregon — Failed 2026</span>
-      <span class="pill failed">❌ Wyoming — Failed 2026</span>
-      <span class="pill gray">⬜ 43 Other States — Gray Area</span>
+      <span class="pill legal">&#9989; Utah &mdash; Law Passed</span>
+      <span class="pill legal">&#9989; Virginia &mdash; Law Passed (July 2026)</span>
+      <span class="pill legal">&#9989; Maine &mdash; Law Passed (July 2026)</span>
+      <span class="pill pending">&#129505; Colorado &mdash; Senate Pending</span>
+      <span class="pill pending">&#129505; California &mdash; Committee Passed</span>
+      <span class="pill failed">&#10060; Oregon &mdash; Failed 2026</span>
+      <span class="pill failed">&#10060; Wyoming &mdash; Failed 2026</span>
+      <span class="pill gray">&#11036; 43 Other States &mdash; Gray Area</span>
     </div>
-    <a href="state-tracker.html" class="states-cta">See Full State-by-State Tracker →</a>
+    <a href="state-tracker.html" class="states-cta">See Full State-by-State Tracker &rarr;</a>
   </div>
 </section>
-
-<!-- REFERRALS / SHOP NOW -->
 <section class="referrals">
   <div class="container">
     <div class="section-label">Ready to buy?</div>
     <h2>Get started today</h2>
-    <p class="subhead">These products are available now. We'll continue to update this list as the market develops — and flag anything worth buying in the newsletter.</p>
+    <p class="subhead">These products are available now. We&apos;ll continue to update this list as the market develops &mdash; and flag anything worth buying in the newsletter.</p>
     <div class="referral-grid">
       <div class="referral-card">
         <span class="referral-tag tag-plugin">Plug-In Kit</span>
         <h3>PluggedSolar 800W Kit</h3>
         <p>Amazon-distributed, UL 1741 certified. Four 200W panels, microinverter, WiFi monitoring, and all cables. Solid turnkey option for first-timers.</p>
-        <a href="https://www.pluggedsolar.com" target="_blank" rel="noopener">Shop PluggedSolar →</a>
+        <a href="https://www.pluggedsolar.com" target="_blank" rel="noopener">Shop PluggedSolar &rarr;</a>
       </div>
       <div class="referral-card">
         <span class="referral-tag tag-plugin">Plug-In Kit</span>
         <h3>Bright Saver Kits</h3>
         <p>SF-based nonprofit focused on making clean energy accessible. California-focused, with kits designed for both backyard and balcony installations. Check their site for current availability and pricing.</p>
-        <a href="https://www.brightsaver.org" target="_blank" rel="noopener">See Bright Saver Kits →</a>
+        <a href="https://www.brightsaver.org" target="_blank" rel="noopener">See Bright Saver Kits &rarr;</a>
       </div>
       <div class="referral-card">
         <span class="referral-tag tag-full">Full Rooftop Solar</span>
         <h3>Own your home? Go bigger.</h3>
-        <p>Plug-in solar is great for renters and a solid entry point — but if you own your home, a full rooftop system offers far greater savings. Get quotes from certified installers.</p>
-        <a href="https://www.energysage.com" target="_blank" rel="noopener">Compare Installer Quotes →</a>
+        <p>Plug-in solar is great for renters and a solid entry point &mdash; but if you own your home, a full rooftop system offers far greater savings. Get quotes from certified installers.</p>
+        <a href="https://www.energysage.com" target="_blank" rel="noopener">Compare Installer Quotes &rarr;</a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- BOTTOM CTA -->
 <section class="bottom-cta" id="newsletter-bottom">
   <div class="container">
     <div class="section-label">Stay in the loop</div>
     <h2>The plug-in solar newsletter.</h2>
-    <p>New state laws, products worth considering, and honest takes on what's happening in the market. We cover it as it develops — no hype, no fluff.</p>
-    <form class="bottom-form" onsubmit="handleSubmit(event)">
-      <input type="email" placeholder="your@email.com" required />
-      <button type="submit">Subscribe →</button>
+    <p>New state laws, products worth considering, and honest takes on what&apos;s happening in the market. We cover it as it develops &mdash; no hype, no fluff.</p>
+    <form class="bottom-form" action="https://9fab9952.sibforms.com/serve/MUIFAHMojyBzq13eTuncyudotUjTjx7XUafDYZL7m4iNeLON5qOBWkB_3RUNxLfir_qz6KgYZMXeDwYdDCk-8ON-FC3__pz2xthRhtHrsdK7bOBLpHbBd7Sy453R2Ptqv3tUBrjaKK6vMf6f98DYnShmJdlmWPrG6aw4KKrS05scvpWW5h61J-uF2ufe-1eW3ySaBIgujcgyZ6Zgyw==" method="POST" target="brevo-hidden">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required />
+      <button type="submit">Subscribe &rarr;</button>
+        <input type="text" name="email_address_check" value="" style="display:none;" aria-hidden="true" tabindex="-1">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
     </form>
   </div>
 </section>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">Your<span>Solar</span>Plug</div>
-  <div style="margin-bottom: 12px;">
+  <div style="margin-bottom:12px;">
     <a href="how-it-works.html">How It Works</a>
     <a href="state-tracker.html">State Tracker</a>
     <a href="kit.html">Products</a>
   </div>
-  <p>© 2026 YourSolarPlug.com — Information is provided for educational purposes only.<br/>Laws change. Always verify current status with your state legislature or a local attorney.</p>
+  <p>&copy; 2026 YourSolarPlug.com &mdash; Information is provided for educational purposes only.<br/>Laws change. Always verify current status with your state legislature or a local attorney.</p>
 </footer>
-
 <script>
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('button');
-    const input = e.target.querySelector('input');
-    btn.text
+  document.querySelectorAll('form[target="brevo-hidden"]').forEach(function(form) {
+    form.addEventListener('submit', function() {
+      var btn = this.querySelector('button[type="submit"]');
+      var input = this.querySelector('input[type="email"]');
+      setTimeout(function() {
+        if (btn) { btn.textContent = "You\'re on the list!"; btn.style.background = '#2E7D32'; btn.disabled = true; }
+        if (input) input.disabled = true;
+      }, 600);
+    });
+  });
+</script>
+</body>
+</html>
