@@ -12,12 +12,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy via SCP
-        uses: appleboy/scp-action@v0.1.7
+      - name: SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          host: ${{ secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          source: "*.html"
-          target: "public_html"
+          local_path: './'
+          remote_path: './'
+          sftp_only: true
+          args: '-o StrictHostKeyChecking=no'
+          delete_remote_files: false
+          exclude: '.git* .github *.docx'
