@@ -190,14 +190,44 @@
 <section class="available-now">
   <div class="container">
     <div class="section-label" style="color:var(--sun);">Available now</div>
-    <h2>Plug-in solar kits you can buy today</h2>
-    <p class="subhead">These are the products we&apos;d point renters and homeowners toward right now.</p>
-    <div class="avail-grid">
-      <div class="avail-card"><h3>PluggedSolar 800W Kit</h3><p>Amazon-distributed, UL 1741 certified. Four 200W panels, EZ1 inverter, WiFi monitoring. Ships to most US states. Good turnkey option for apartment solar or backyard installs.</p><a href="https://www.pluggedsolar.com" target="_blank" rel="noopener">Shop PluggedSolar &rarr;</a></div>
-      <div class="avail-card"><h3>Bright Saver Kits</h3><p>SF-based nonprofit focused on clean energy access. California-focused. Their kits include 250W and 400W panel configurations. Check their site for current availability.</p><a href="https://www.brightsaver.org" target="_blank" rel="noopener">See Bright Saver Kits &rarr;</a></div>
-      <div class="avail-card"><h3>Build your own on Amazon</h3><p>The APsystems EZ1-M inverter, 400W panels, and MC4 cables are all available individually. More research required, but it works and can be cheaper.</p><a href="https://www.amazon.com/s?k=APsystems+EZ1+microinverter" target="_blank" rel="noopener">Search Amazon &rarr;</a></div>
-      <div class="avail-card"><h3>EcoFlow STREAM Ultra</h3><p>The most advanced balcony power station on the market. Combines a microinverter and 1.92kWh LFP battery in one unit. Up to 1,200W output, expandable to 11.52kWh, with two dedicated outlets you can plug devices into directly. Around $1,459 &mdash; a fundamentally different product than a basic plug-in kit.</p><a href="https://us.ecoflow.com/products/stream-ultra" target="_blank" rel="noopener">See EcoFlow STREAM Ultra &rarr;</a></div>
+    <h2>Plug-in solar products worth buying</h2>
+    <p class="subhead">What we&apos;d actually recommend right now, in order of priority.</p>
+
+    <div class="featured-product">
+      <div class="featured-badge">&#11088; Top Pick</div>
+      <h3>EcoFlow STREAM Ultra</h3>
+      <div class="featured-price">~$1,459</div>
+      <div class="spec-tags">
+        <span class="spec-tag">1.92 kWh LFP battery</span>
+        <span class="spec-tag">Up to 1,200W output</span>
+        <span class="spec-tag">Expandable to 11.52 kWh</span>
+        <span class="spec-tag">Works during outages</span>
+        <span class="spec-tag">Two dedicated outlets</span>
+      </div>
+      <p>The most complete balcony solar product on the market. Unlike a basic plug-in kit that offsets your grid draw in real time and shuts off the moment the grid goes down, the STREAM Ultra combines a microinverter and LFP battery in one unit &mdash; so you&apos;re actually storing power. Two dedicated outlets let you plug devices directly into it, independent of your home wiring. If the grid goes down, it keeps running. It&apos;s a fundamentally different product than a $500 kit, and for anyone serious about energy independence without a roof installation, it&apos;s the one to look at.</p>
+      <p style="font-size:0.83rem;color:rgba(255,200,100,0.85);margin-bottom:18px;">&#9888; Currently ships to Utah only. We&apos;ll update this as availability expands &mdash; sign up for the newsletter to hear when it ships to your state.</p>
+      <a class="featured-btn" href="ECOFLOW_AFFILIATE_LINK_HERE" target="_blank" rel="noopener sponsored">See EcoFlow STREAM Ultra &rarr;</a>
     </div>
+
+    <div class="secondary-label">Also worth considering</div>
+    <div class="avail-grid">
+      <div class="avail-card">
+        <h3>PluggedSolar 800W Kit</h3>
+        <p>UL 1741 certified, ships via Amazon. Four 200W panels, APsystems EZ1 inverter with WiFi monitoring. Everything designed to work together &mdash; good starting kit if you want turnkey without the battery price tag.</p>
+        <a href="https://www.amazon.com/dp/B09D61CP1T/?tag=yoursl-20" target="_blank" rel="noopener sponsored">Shop on Amazon &rarr;</a>
+      </div>
+      <div class="avail-card">
+        <h3>Bright Saver Kits</h3>
+        <p>SF-based nonprofit focused on clean energy access. California-focused, with 250W and 400W configurations. Worth checking if you&apos;re in the Bay Area or want to support mission-driven solar.</p>
+        <a href="https://www.brightsaver.org" target="_blank" rel="noopener">See Bright Saver &rarr;</a>
+      </div>
+      <div class="avail-card">
+        <h3>DIY: Source Your Own</h3>
+        <p>For the inverter, the APsystems EZ1-M is the most credible US option &mdash; UL 1741 certified, purpose-built for plug-in solar, sold direct. Add panels and MC4 cables separately. More research required, but it works and can be cheaper.</p>
+        <a href="https://apstore.apsystems.com/" target="_blank" rel="noopener">Buy APsystems EZ1-M Direct &rarr;</a>
+      </div>
+    </div>
+    <p class="affiliate-note">Some links above are affiliate links. We may earn a small commission at no extra cost to you.</p>
   </div>
 </section>
 <section class="cta-strip">
@@ -226,14 +256,4 @@
 <script>
   document.querySelectorAll('form[target="brevo-hidden"]').forEach(function(form) {
     form.addEventListener('submit', function() {
-      var btn = this.querySelector('button[type="submit"]');
-      var input = this.querySelector('input[type="email"]');
-      setTimeout(function() {
-        if (btn) { btn.textContent = "You\'re on the list!"; btn.style.background = '#2E7D32'; btn.disabled = true; }
-        if (input) input.disabled = true;
-      }, 600);
-    });
-  });
-</script>
-</body>
-</html>
+      var btn = this.querySelector('button[type="submit"]')
