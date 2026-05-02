@@ -78,6 +78,9 @@
     footer a:hover { color:var(--sun); }
     .footer-logo { font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:10px; }
     .footer-logo span { color:var(--sun); }
+    .tooltip-term { border-bottom:1px dotted var(--slate); cursor:help; position:relative; display:inline; }
+    .tooltip-term::after { content:attr(data-tip); position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%); background:var(--navy); color:var(--white); padding:10px 14px; border-radius:7px; font-size:0.82rem; font-weight:400; white-space:normal; width:260px; text-align:left; pointer-events:none; opacity:0; transition:opacity 0.15s; z-index:50; line-height:1.5; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
+    .tooltip-term:hover::after { opacity:1; }
     @media (max-width:640px) { .nav-links { display:none; } .math-grid-2col { grid-template-columns:1fr !important; } }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCRNQFDZJ2"></script>
@@ -92,7 +95,7 @@
       <li><a href="how-it-works.html">How It Works</a></li>
       <li><a href="state-tracker.html">Is It Legal?</a></li>
       <li><a href="kit.html">Products</a></li>
-      <li><a href="index.html#newsletter" class="nav-cta">Newsletter</a></li>
+      <li><a href="#newsletter" class="nav-cta">Newsletter</a></li>
     </ul>
   </div>
 </nav>
@@ -112,8 +115,8 @@
   <table class="component-table">
     <thead><tr><th>Component</th><th>What it does</th><th>Typical cost</th></tr></thead>
     <tbody>
-      <tr><td><span class="component-name">Solar panels (1&ndash;2)</span></td><td>Capture sunlight and convert it to DC electricity. Common configs use 250W or 400W panels. For balcony solar, a single 400W panel is a common starting point.</td><td>$100&ndash;$250+ per panel depending on size and source</td></tr>
-      <tr><td><span class="component-name">Microinverter</span></td><td>Converts DC power from the panels into AC electricity your home can use. The APsystems EZ1-M is the most widely used US model. The EcoFlow STREAM is a newer alternative integrating with EcoFlow&apos;s battery ecosystem.</td><td>$150&ndash;$300</td></tr>
+      <tr><td><span class="component-name">Solar panels (1&ndash;2)</span></td><td>Capture sunlight and convert it to DC electricity. Panels range from 100W to 400W+. Smaller panels (100&ndash;200W) are easier to ship, carry, and mount &mdash; and you can combine multiples for more output. For balcony solar, a single 400W panel is the most common starting point.</td><td>$100&ndash;$250+ per panel depending on size and source</td></tr>
+      <tr><td><span class="component-name">Microinverter</span></td><td>Converts DC power from the panels into AC electricity your home can use. Look for one certified to <span class="tooltip-term" data-tip="UL 1741 — the existing US safety standard for grid-connected inverters. Covers anti-islanding, electrical protection, and grid interaction requirements. Required by most utilities today.">UL 1741</span>; once available, <span class="tooltip-term" data-tip="UL 3700 — the new 2026 standard written specifically for plug-in solar. Adds dead-plug protection, overload monitoring, and consumer safety requirements beyond UL 1741. No certified products yet as of mid-2026.">UL 3700</span> will be the gold standard. The APsystems EZ1-M is the most widely used US model (UL 1741 certified). The EcoFlow STREAM is a newer alternative integrating with EcoFlow&apos;s battery ecosystem.</td><td>$150&ndash;$300</td></tr>
       <tr><td><span class="component-name">DC cables (MC4)</span></td><td>Connect the panels to the microinverter. Usually included with kits. Weatherproof and rated for outdoor UV exposure.</td><td>$15&ndash;$30</td></tr>
       <tr><td><span class="component-name">Plug cord (safety)</span></td><td>Connects the microinverter output to your wall outlet. Uses a safety plug designed to prevent back-feeding when unplugged. Required by law in some states.</td><td>$20&ndash;$40</td></tr>
       <tr style="background:#FFFDE7;"><td><span class="component-name">Battery storage <em style="font-size:0.8rem;font-weight:400;color:#888;">(optional)</em></span></td><td>Allows you to store solar energy and use it at night or during outages. The plug-in solar battery market is still evolving. The EcoFlow STREAM Ultra: 1.92kWh, integrated microinverter, two dedicated outlets, ~$1,459.</td><td>~$1,000&ndash;$2,000+ currently</td></tr>
@@ -124,7 +127,7 @@
   <p>If your fridge, TV, and lights are pulling 300W from the grid, and your panels are generating 400W, your net draw drops to roughly zero, and the extra 100W flows back through your meter. Some utilities may require prior approval for any grid-connected system regardless of size &mdash; worth checking before installing.</p>
   <p>Think of it like a garden hose filling a bathtub that has a drain open. You&apos;re not storing water; you&apos;re just flowing water in faster than the drain takes it out.</p>
   <div class="callout"><p><strong>Important: use a dedicated circuit.</strong> The National Electrical Code (NEC 705.12) limits how much solar power can safely flow back through any single circuit. Your plug-in system should connect to a <em>dedicated</em> circuit (one not shared with other appliances). An 800W system on a dedicated 20A circuit generally falls within these limits. Going above 1,000W, or plugging into an already-loaded circuit, can trip breakers. When in doubt, have a licensed electrician verify your circuit before plugging in.</p></div>
-  <div class="callout"><p><strong>Battery storage exists, but changes the setup.</strong> Standard plug-in solar does not give you backup power &mdash; it shuts off automatically when the grid goes down (a required safety feature). The <strong>EcoFlow STREAM Ultra</strong> (~$1,459) &mdash; essentially a balcony power station &mdash; combines a microinverter and 1.92kWh LFP battery in one unit, with up to 1,200W output, two dedicated outlets you can plug devices into directly, and expandable capacity up to 11.52kWh. Advanced users have also built hybrid setups using a charge controller and separate battery to deliver continuous output even at night.</p></div>
+  <div class="callout"><p><strong>Battery storage exists, but changes the setup.</strong> Standard plug-in solar does not give you backup power &mdash; it shuts off automatically when the grid goes down (a required safety feature). The <strong>EcoFlow STREAM Ultra</strong> (~$1,459) &mdash; essentially a balcony power station &mdash; combines a microinverter and 1.92kWh LFP battery in one unit, with up to 1,200W output, two dedicated outlets you can plug devices into directly, and expandable capacity up to 11.52kWh. Beyond outage protection, a battery also lets you store solar energy and draw it during peak-rate hours &mdash; a real advantage if your utility uses time-of-use (TOU) pricing.</p></div>
   <h2>A note for California homeowners: NEM 2.0 and 3.0</h2>
   <p>If you&apos;re on Net Energy Metering 2.0 (NEM 2.0) in California, adding panels through a traditional installer will almost certainly trigger migration to NEM 3.0, which pays significantly less for exported solar energy.</p>
   <p>Plug-in solar under 1kW is a meaningful exception. Because it doesn&apos;t require a new interconnection agreement, many NEM 2.0 customers have added a small plug-in system without triggering a rate change. <strong>Verify the rules with your utility before proceeding</strong>, as policies can vary and change.</p>
@@ -201,7 +204,7 @@
     <div class="faq-item"><div class="faq-q">Can my HOA ban balcony solar?</div><div class="faq-a">It depends on your state. In Virginia, HOAs cannot ban balcony solar within the legal wattage limit. In most other states, HOA rules vary widely. Check your CC&amp;Rs and, if in doubt, submit a written request to your HOA board. This is one reason state legislation matters &mdash; it removes that ambiguity.</div></div>
     <div class="faq-item"><div class="faq-q">How much electricity will it actually offset?</div><div class="faq-a">A realistic 800W system in an average US location will generate 900&ndash;1,200 kWh per year. The average US household uses ~10,500 kWh/year, so that&apos;s roughly 9&ndash;12% of total consumption. If you&apos;re a renter in a smaller apartment using 4,000&ndash;6,000 kWh/year, the same system could offset 15&ndash;25% of your usage &mdash; a real dent in your bill.</div></div>
   </div>
-  <div class="cta-strip">
+  <div id="newsletter" class="cta-strip">
     <h3>Stay current on plug-in and balcony solar</h3>
     <p>New state laws, products worth considering, and honest takes on the market. No hype, no fluff.</p>
     <form class="cta-form" action="https://9fab9952.sibforms.com/serve/MUIFAHMojyBzq13eTuncyudotUjTjx7XUafDYZL7m4iNeLON5qOBWkB_3RUNxLfir_qz6KgYZMXeDwYdDCk-8ON-FC3__pz2xthRhtHrsdK7bOBLpHbBd7Sy453R2Ptqv3tUBrjaKK6vMf6f98DYnShmJdlmWPrG6aw4KKrS05scvpWW5h61J-uF2ufe-1eW3ySaBIgujcgyZ6Zgyw==" method="POST" target="brevo-hidden">
@@ -222,6 +225,7 @@
     <a href="kit.html">Products</a>
   </div>
   <p>&copy; 2026 YourSolarPlug.com &mdash; Information is provided for educational purposes only.<br/>Laws change. Always verify current status with your state legislature or a local attorney.</p>
+  <p style="margin-top:10px;font-size:0.78rem;">Some links on this site are affiliate links. We may earn a small commission at no extra cost to you.</p>
 </footer>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
