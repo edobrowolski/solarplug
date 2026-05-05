@@ -82,7 +82,7 @@
     .tooltip-term::after { content:attr(data-tip); position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%); background:var(--navy); color:var(--white); padding:10px 14px; border-radius:7px; font-size:0.82rem; font-weight:400; white-space:normal; width:260px; text-align:left; pointer-events:none; opacity:0; transition:opacity 0.15s; z-index:50; line-height:1.5; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
     .tooltip-term:hover::after { opacity:1; }
     .hamburger { display:none; background:none; border:none; font-size:1.5rem; color:var(--navy); cursor:pointer; padding:4px 8px; line-height:1; }
-    @media (max-width:640px) {
+    @media (max-width:900px) {
       .hamburger { display:block; }
       .nav-links { display:none; flex-direction:column; position:absolute; top:60px; left:0; right:0; background:var(--white); border-bottom:1px solid var(--border); padding:8px 0; gap:0; z-index:200; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
       .nav-links.open { display:flex; }
@@ -116,8 +116,8 @@
 </div>
 <div class="content">
   <h2>The short version</h2>
-  <p>A plug-in solar system &mdash; sometimes called balcony solar or a balcony power station, terms popular in Europe where millions of these systems are already running &mdash; is exactly what it sounds like: solar panels that generate electricity and send it into your home through a standard wall outlet. No special wiring, no roof work. You generate power, it flows into your circuit, and whatever you&apos;re drawing from the grid goes down by that amount.</p>
-  <p>A basic 800W system on a sunny day will generate roughly 3&ndash;5 kWh of electricity. Depending on your electricity rate, that&apos;s maybe 50&ndash;80 cents of savings per day. Annualize it and you&apos;re looking at $180&ndash;$300 in savings per year from a system that costs $400&ndash;$900 up front. That&apos;s a 2&ndash;4 year payback, comparable to a full rooftop system.</p>
+  <p>A plug-in solar system, sometimes called balcony solar or a balcony power station (a term popular in Europe where millions of these systems are already running), is exactly what it sounds like: solar panels that generate electricity and send it into your home through a standard wall outlet. No special wiring, no roof work. You generate power, it flows into your circuit, and whatever you&apos;re drawing from the grid goes down by that amount.</p>
+  <p>A basic 800W system on a sunny day will generate roughly 3&ndash;5 kWh of electricity. At the US average rate that adds up to meaningful, consistent savings, but in high-cost states where some utilities now charge in excess of $0.50 per kWh, that same system can save $500 or more per year, with potential payback in under 18 months. For a system that costs $400&ndash;$900 up front, that is a return comparable to a full rooftop installation.</p>
   <h2>The components</h2>
   <p>A basic system has four required parts. Battery storage is optional but worth knowing about.</p>
   <table class="component-table">
@@ -135,7 +135,7 @@
   <p>If your fridge, TV, and lights are pulling 300W from the grid, and your panels are generating 400W, your net draw drops to roughly zero, and the extra 100W flows back through your meter. Some utilities may require prior approval for any grid-connected system regardless of size &mdash; worth checking before installing.</p>
   <p>Think of it like a garden hose filling a bathtub that has a drain open. You&apos;re not storing water; you&apos;re just flowing water in faster than the drain takes it out.</p>
   <div class="callout"><p><strong>Important: use a dedicated circuit.</strong> The National Electrical Code (NEC 705.12) limits how much solar power can safely flow back through any single circuit. Your plug-in system should connect to a <em>dedicated</em> circuit (one not shared with other appliances). An 800W system on a dedicated 20A circuit generally falls within these limits. Going above 1,000W, or plugging into an already-loaded circuit, can trip breakers. When in doubt, have a licensed electrician verify your circuit before plugging in.</p></div>
-  <div class="callout"><p><strong>Battery storage exists, but changes the setup.</strong> Standard plug-in solar does not give you backup power &mdash; it shuts off automatically when the grid goes down (a required safety feature). The <strong>EcoFlow STREAM Ultra</strong> (~$1,459) &mdash; essentially a balcony power station &mdash; combines a microinverter and 1.92kWh LFP battery in one unit, with up to 1,200W output, two dedicated outlets you can plug devices into directly, and expandable capacity up to 11.52kWh. Beyond outage protection, a battery also lets you store solar energy and draw it during peak-rate hours &mdash; a real advantage if your utility uses time-of-use (TOU) pricing.</p></div>
+  <div class="callout"><p><strong>Battery storage exists, but changes the setup.</strong> Standard plug-in solar does not give you backup power; it shuts off automatically when the grid goes down (a required safety feature). The <strong>EcoFlow STREAM Ultra</strong> (starting at $1,199), essentially a balcony power station, combines a microinverter and 1.92kWh LFP battery in one unit, with up to 1,200W output, two dedicated outlets you can plug devices into directly, and expandable capacity up to 11.52kWh. Beyond outage protection, a battery also lets you store solar energy and draw it during peak-rate hours, a real advantage if your utility uses time-of-use (TOU) pricing.</p></div>
   <h2>A note for California homeowners: NEM 2.0 and 3.0</h2>
   <p>If you&apos;re on Net Energy Metering 2.0 (NEM 2.0) in California, adding panels through a traditional installer will almost certainly trigger migration to NEM 3.0, which pays significantly less for exported solar energy.</p>
   <p>Plug-in solar under 1kW is a meaningful exception. Because it doesn&apos;t require a new interconnection agreement, many NEM 2.0 customers have added a small plug-in system without triggering a rate change. <strong>Verify the rules with your utility before proceeding</strong>, as policies can vary and change.</p>
@@ -167,7 +167,7 @@
   <p>In states with cheap power (under $0.12/kWh), the ROI case is weaker. At the other extreme, Hawaii rates top $0.40/kWh &mdash; the math there is exceptional.</p>
   <h2>Is it actually safe? The UL 3700 standard</h2>
   <p>The most common objection &mdash; from landlords, utilities, and skeptical family members &mdash; is a fair one: is it safe to plug a power source into a standard wall outlet?</p>
-  <p>UL Solutions addressed this head-on in early 2026 with UL 3700, the first US safety certification written specifically for plug-in solar systems. The standard finalized in December 2025, and most new state legislation either requires or directly references it. As of mid-2026, manufacturers are actively pursuing certification &mdash; no products have officially earned it yet, but UL 3700-compliant products are expected on the market later this year.</p>
+  <p>UL Solutions addressed this head-on in early 2026 with UL 3700, the first US safety certification written specifically for plug-in solar systems. The standard finalized in December 2025, and most new state legislation either requires or directly references it. As of mid-2026, manufacturers are actively pursuing certification. No products have officially earned it yet, but UL 3700-compliant products are expected on the market later this year.</p>
   <div class="honest-box">
     <h3>What UL 3700 actually requires</h3>
     <ul>
