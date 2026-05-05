@@ -81,7 +81,14 @@
     .tooltip-term { border-bottom:1px dotted var(--slate); cursor:help; position:relative; display:inline; }
     .tooltip-term::after { content:attr(data-tip); position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%); background:var(--navy); color:var(--white); padding:10px 14px; border-radius:7px; font-size:0.82rem; font-weight:400; white-space:normal; width:260px; text-align:left; pointer-events:none; opacity:0; transition:opacity 0.15s; z-index:50; line-height:1.5; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
     .tooltip-term:hover::after { opacity:1; }
-    @media (max-width:640px) { .nav-links { display:none; } .math-grid-2col { grid-template-columns:1fr !important; } }
+    .hamburger { display:none; background:none; border:none; font-size:1.5rem; color:var(--navy); cursor:pointer; padding:4px 8px; line-height:1; }
+    @media (max-width:640px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; flex-direction:column; position:absolute; top:60px; left:0; right:0; background:var(--white); border-bottom:1px solid var(--border); padding:8px 0; gap:0; z-index:200; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+      .nav-links.open { display:flex; }
+      .nav-links li { border-bottom:1px solid var(--border); }
+      .nav-links li:last-child { border-bottom:none; }
+      .nav-links a { display:block; padding:14px 24px; } .math-grid-2col { grid-template-columns:1fr !important; } }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCRNQFDZJ2"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZCRNQFDZJ2');</script>
@@ -97,6 +104,7 @@
       <li><a href="kit.html">Products</a></li>
       <li><a href="#newsletter" class="nav-cta">Newsletter</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
   </div>
 </nav>
 <div class="page-hero">
@@ -116,7 +124,7 @@
     <thead><tr><th>Component</th><th>What it does</th><th>Typical cost</th></tr></thead>
     <tbody>
       <tr><td><span class="component-name">Solar panels (1&ndash;2)</span></td><td>Capture sunlight and convert it to DC electricity. Panels range from 100W to 400W+. Smaller panels (100&ndash;200W) are easier to ship, carry, and mount &mdash; and you can combine multiples for more output. For balcony solar, a single 400W panel is the most common starting point.</td><td>$100&ndash;$250+ per panel depending on size and source</td></tr>
-      <tr><td><span class="component-name">Microinverter</span></td><td>Converts DC power from the panels into AC electricity your home can use. Look for one certified to <span class="tooltip-term" data-tip="UL 1741 — the existing US safety standard for grid-connected inverters. Covers anti-islanding, electrical protection, and grid interaction requirements. Required by most utilities today.">UL 1741</span>; once available, <span class="tooltip-term" data-tip="UL 3700 — the new 2026 standard written specifically for plug-in solar. Adds dead-plug protection, overload monitoring, and consumer safety requirements beyond UL 1741. No certified products yet as of mid-2026.">UL 3700</span> will be the gold standard. The APsystems EZ1-M is the most widely used US model (UL 1741 certified). The EcoFlow STREAM is a newer alternative integrating with EcoFlow&apos;s battery ecosystem.</td><td>$150&ndash;$300</td></tr>
+      <tr><td><span class="component-name">Microinverter</span></td><td>Converts DC power from the panels into AC electricity your home can use. Look for one certified to <span class="tooltip-term" data-tip="UL 1741 — the existing US safety standard for grid-connected inverters. Covers anti-islanding, electrical protection, and grid interaction requirements. Required by most utilities today.">UL 1741</span>; once available, <span class="tooltip-term" data-tip="UL 3700 — the new 2026 standard written specifically for plug-in solar. Adds dead-plug protection, overload monitoring, and consumer safety requirements beyond UL 1741. No certified products yet as of mid-2026.">UL 3700</span> will be the gold standard. The APsystems EZ1 is the most widely used model in the world (UL 1741 certified). The EcoFlow STREAM is a newer alternative integrating with EcoFlow&apos;s battery ecosystem.</td><td>~$300</td></tr>
       <tr><td><span class="component-name">DC cables (MC4)</span></td><td>Connect the panels to the microinverter. Usually included with kits. Weatherproof and rated for outdoor UV exposure.</td><td>$15&ndash;$30</td></tr>
       <tr><td><span class="component-name">Plug cord (safety)</span></td><td>Connects the microinverter output to your wall outlet. Uses a safety plug designed to prevent back-feeding when unplugged. Required by law in some states.</td><td>$20&ndash;$40</td></tr>
       <tr style="background:#FFFDE7;"><td><span class="component-name">Battery storage <em style="font-size:0.8rem;font-weight:400;color:#888;">(optional)</em></span></td><td>Allows you to store solar energy and use it at night or during outages. The plug-in solar battery market is still evolving. The EcoFlow STREAM Ultra: 1.92kWh, integrated microinverter, two dedicated outlets, ~$1,459.</td><td>~$1,000&ndash;$2,000+ currently</td></tr>
@@ -229,6 +237,17 @@
 </footer>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+        hamburger.innerHTML = navLinks.classList.contains('open') ? '&#10005;' : '&#9776;';
+      });
+      navLinks.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { navLinks.classList.remove('open'); hamburger.innerHTML = '&#9776;'; });
+      });
+    }
     document.querySelectorAll('.faq-q').forEach(function(q) {
       q.addEventListener('click', function() {
         this.classList.toggle('open');

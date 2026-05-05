@@ -103,8 +103,14 @@
     footer a:hover { color: var(--sun); }
     .footer-logo { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
     .footer-logo span { color: var(--sun); }
+    .hamburger { display:none; background:none; border:none; font-size:1.5rem; color:var(--navy); cursor:pointer; padding:4px 8px; line-height:1; }
     @media (max-width: 640px) {
-      .nav-links { display: none; }
+      .hamburger { display:block; }
+      .nav-links { display:none; flex-direction:column; position:absolute; top:60px; left:0; right:0; background:var(--white); border-bottom:1px solid var(--border); padding:8px 0; gap:0; z-index:200; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+      .nav-links.open { display:flex; }
+      .nav-links li { border-bottom:1px solid var(--border); }
+      .nav-links li:last-child { border-bottom:none; }
+      .nav-links a { display:block; padding:14px 24px; }
       .steps { flex-direction: column; }
       .step:not(:last-child)::after { content: '↓'; right: auto; left: 10px; top: auto; bottom: -20px; }
       .hero-stats { gap: 24px; }
@@ -124,6 +130,7 @@
       <li><a href="kit.html">Products</a></li>
       <li><a href="#newsletter" class="nav-cta">Newsletter</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
   </div>
 </nav>
 <section class="hero">
@@ -198,10 +205,10 @@
     <p class="subhead">These products are available now. We&apos;ll continue to update this list as the market develops &mdash; and flag anything worth buying in the newsletter.</p>
     <div class="referral-grid">
       <div class="referral-card">
-        <span class="referral-tag tag-plugin">Plug-In Kit</span>
-        <h3>PluggedSolar 800W Kit</h3>
-        <p>Amazon-distributed, UL 1741 certified. Four 200W panels, microinverter, WiFi monitoring, and all cables. Solid turnkey option for first-timers.</p>
-        <a href="https://www.amazon.com/dp/B09D61CP1T/?tag=yoursl-20" target="_blank" rel="noopener sponsored">Shop on Amazon &rarr;</a>
+        <span class="referral-tag tag-plugin">Plug-In Inverter</span>
+        <h3>APsystems EZ1</h3>
+        <p>Europe&apos;s most widely used plug-in solar microinverter, now available in the US. UL 1741 certified, purpose-built for balcony and plug-in solar, with a 12-year warranty. Buy direct from APsystems.</p>
+        <a href="https://apstore.apsystems.com/" target="_blank" rel="noopener">Shop APsystems Direct &rarr;</a>
       </div>
       <div class="referral-card">
         <span class="referral-tag tag-plugin">Plug-In Kit</span>
@@ -243,6 +250,17 @@
   <p style="margin-top:10px;font-size:0.78rem;">Some links on this site are affiliate links. We may earn a small commission at no extra cost to you.</p>
 </footer>
 <script>
+  var hamburger = document.getElementById('hamburger');
+  var navLinks = document.querySelector('.nav-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('open');
+      hamburger.innerHTML = navLinks.classList.contains('open') ? '&#10005;' : '&#9776;';
+    });
+    navLinks.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() { navLinks.classList.remove('open'); hamburger.innerHTML = '&#9776;'; });
+    });
+  }
   document.querySelectorAll('form[target="brevo-hidden"]').forEach(function(form) {
     form.addEventListener('submit', function() {
       var btn = this.querySelector('button[type="submit"]');

@@ -87,7 +87,16 @@
     footer a:hover { color:var(--sun); }
     .footer-logo { font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:10px; }
     .footer-logo span { color:var(--sun); }
-    @media (max-width:640px) { .nav-links { display:none; } tbody td { padding:12px; } thead th { padding:12px; } }
+    .hamburger { display:none; background:none; border:none; font-size:1.5rem; color:var(--navy); cursor:pointer; padding:4px 8px; line-height:1; }
+    @media (max-width:640px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; flex-direction:column; position:absolute; top:60px; left:0; right:0; background:var(--white); border-bottom:1px solid var(--border); padding:8px 0; gap:0; z-index:200; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+      .nav-links.open { display:flex; }
+      .nav-links li { border-bottom:1px solid var(--border); }
+      .nav-links li:last-child { border-bottom:none; }
+      .nav-links a { display:block; padding:14px 24px; }
+      tbody td { padding:12px; } thead th { padding:12px; }
+    }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCRNQFDZJ2"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZCRNQFDZJ2');</script>
@@ -103,6 +112,7 @@
       <li><a href="kit.html">Products</a></li>
       <li><a href="#newsletter" class="nav-cta">Newsletter</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
   </div>
 </nav>
 <div class="page-hero">
@@ -229,6 +239,17 @@
 </footer>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+        hamburger.innerHTML = navLinks.classList.contains('open') ? '&#10005;' : '&#9776;';
+      });
+      navLinks.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { navLinks.classList.remove('open'); hamburger.innerHTML = '&#9776;'; });
+      });
+    }
     var activeFilters = new Set(['legal','pending','introduced','failed','gray']);
     function applyFilters() {
       var query = document.getElementById('search').value.toLowerCase();
