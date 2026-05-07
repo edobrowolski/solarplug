@@ -1,0 +1,14 @@
+Options -Indexes
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove www
+RewriteCond %{HTTP_HOST} ^www\.yoursolarplug\.com [NC]
+RewriteRule ^ https://yoursolarplug.com%{REQUEST_URI} [L,R=301]
+
+# Remove /index.html — redirect to clean root
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [L,R=301]
