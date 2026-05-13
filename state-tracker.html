@@ -97,7 +97,12 @@
       .nav-links a { display:block; padding:14px 24px; }
       tbody td { padding:12px; } thead th { padding:12px; }
     }
-  </style>
+      .recent-changes { background:#FFFDE7; border:2px solid var(--sun); border-radius:var(--radius); padding:18px 24px; margin-bottom:28px; }
+    .rc-header { font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--sun-dark); margin-bottom:10px; }
+    .rc-list { display:flex; flex-wrap:wrap; gap:10px; }
+    .rc-item { display:inline-flex; align-items:center; gap:6px; background:#FFF9C4; border:1px solid #F9A825; border-radius:20px; padding:5px 14px; font-size:0.85rem; font-weight:600; color:#5D4037; }
+    .rc-item .rc-date { font-weight:400; color:var(--slate); margin-left:2px; }
+</style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCRNQFDZJ2"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZCRNQFDZJ2');</script>
 </head>
@@ -120,7 +125,7 @@
     <div class="section-label">Legislation Tracker</div>
     <h1>Is balcony solar or plug-in solar legal in your state?</h1>
     <p>The legal landscape for plug-and-play solar is changing fast. We track every state bill so renters and homeowners don&apos;t have to. Green means go &mdash; yellow means watch this space.</p>
-    <div class="updated">Last updated: May 2026 &nbsp;&middot;&nbsp; <a href="#" style="color:var(--sun);">Suggest a correction</a></div>
+    <div class="updated">Last updated: May 12, 2026 &nbsp;&middot;&nbsp; <a href="#" style="color:var(--sun);">Suggest a correction</a></div>
   </div>
 </div>
 <div class="tracker-section">
@@ -137,6 +142,14 @@
     <div class="filter-bar">
       <input type="text" id="search" placeholder="Search by state name..." />
     </div>
+    <div class="recent-changes">
+      <div class="rc-header">&#128197; Recently Signed Into Law</div>
+      <div class="rc-list">
+        <span class="rc-item">&#9989; Colorado<span class="rc-date">Signed May 7, 2026</span></span>
+        <span class="rc-item">&#9989; Maryland<span class="rc-date">Signed May 12, 2026</span></span>
+        <span class="rc-item">&#9989; Virginia<span class="rc-date">Signed April 2026</span></span>
+      </div>
+    </div>
     <div class="table-wrap">
       <table id="stateTable">
         <thead>
@@ -150,11 +163,11 @@
             <td class="details-text">First US state to pass plug-in solar legislation. No utility interconnection agreement required, no fees. True plug-and-play balcony solar within the wattage limit.</td>
             <td>May 2025</td>
           </tr>
-          <tr data-status="pending">
+          <tr data-status="legal">
             <td><div class="state-name">Virginia</div><div class="bill-ref"><a href="https://legiscan.com/VA/bill/HB395/2026" target="_blank" rel="noopener">HB 395 / SB 250</a></div></td>
-            <td><span class="status status-pending">&#129505; Pending Final Approval</span></td>
+            <td><span class="status status-legal">&#9989; Law Passed</span></td>
             <td><span class="limit-tag">1,200W</span></td>
-            <td class="details-text">Passed both chambers &mdash; 96&ndash;0 in the House. Returned by Governor Spanberger with technical amendments for special session approval, which is widely expected. Landlords in buildings with 4+ units will be prohibited from banning compliant installations.</td>
+            <td class="details-text">Signed by Gov. Spanberger in April 2026. Passed the House 96&ndash;0. Landlords in buildings with 4+ units are prohibited from banning compliant installations. No utility fees, approvals, or interconnection agreements required. Takes effect Jan 1, 2027.</td>
             <td>Jan 2027</td>
           </tr>
           <tr data-status="legal">
@@ -164,12 +177,19 @@
             <td class="details-text">Signed April 2026. Requires a licensed electrician for installation &mdash; so not fully DIY plug-and-play. Still a meaningful step forward for solar for renters.</td>
             <td>July 2026</td>
           </tr>
-          <tr data-status="pending">
+          <tr data-status="legal">
             <td><div class="state-name">Colorado</div><div class="bill-ref"><a href="https://leg.colorado.gov/bills/HB26-1007" target="_blank" rel="noopener">HB26-1007</a></div></td>
-            <td><span class="status status-pending">&#129505; Awaiting Gov. Signature</span></td>
+            <td><span class="status status-legal">&#9989; Law Passed</span></td>
             <td><span class="limit-tag">395W / 1,920W</span></td>
-            <td class="details-text">Passed both chambers April 14, 2026. Creates two tiers: systems up to 395W plug into any standard outlet with zero electrician or permit required; up to 1,920W allowed with a licensed electrician and dedicated circuit. Governor Polis expected to sign.</td>
-            <td>Aug 2026</td>
+            <td class="details-text">Signed by Gov. Polis on May 7, 2026. Two tiers: up to 395W plugs into any standard outlet with no permit or electrician required; up to 1,920W allowed with a licensed electrician and dedicated circuit. Also requires utilities to accept meter collar adapters. Takes full effect Jan 1, 2027.</td>
+            <td>Jan 2027</td>
+          </tr>
+          <tr data-status="legal">
+            <td><div class="state-name">Maryland</div><div class="bill-ref"><a href="https://legiscan.com/MD/bill/HB1532/2026" target="_blank" rel="noopener">HB 1532 (Utility RELIEF Act)</a></div></td>
+            <td><span class="status status-legal">&#9989; Law Passed</span></td>
+            <td><span class="limit-tag">1,200W</span></td>
+            <td class="details-text">Signed by Gov. Moore on May 12, 2026 as part of the broader Utility RELIEF Act. Allows plug-in solar up to 1,200W certified by UL or equivalent. Part of a wide-ranging energy affordability package projected to save Maryland families $150+ per year.</td>
+            <td>Oct 2026</td>
           </tr>
           <tr data-status="pending">
             <td><div class="state-name">California</div><div class="bill-ref"><a href="#" target="_blank" rel="noopener">SB 868</a></div></td>
@@ -178,11 +198,53 @@
             <td class="details-text">Passed Senate Energy Committee unanimously (12&ndash;0) in March 2026. Full Senate and Assembly votes pending. A California pass would be a massive catalyst given the state&apos;s size and solar culture.</td>
             <td>TBD</td>
           </tr>
+          <tr data-status="pending">
+            <td><div class="state-name">New York</div><div class="bill-ref"><a href="https://www.nysenate.gov/legislation/bills/2025/S7717" target="_blank" rel="noopener">SUNNY Act (S7717)</a></div></td>
+            <td><span class="status status-pending">&#129505; Passed Senate</span></td>
+            <td><span class="limit-tag">1,200W</span></td>
+            <td class="details-text">Senate passed 62&ndash;0 in April 2026. Assembly vote still pending. If signed, would be a major win given NY&apos;s population density and large renter base. Requires UL safety certification for all devices.</td>
+            <td>TBD</td>
+          </tr>
+          <tr data-status="pending">
+            <td><div class="state-name">New Hampshire</div><div class="bill-ref"><a href="https://pv-magazine-usa.com/2026/05/12/new-hampshire-legislature-advances-plug-in-solar-bill-to-governor/" target="_blank" rel="noopener">SB 540</a></div></td>
+            <td><span class="status status-pending">&#129505; Awaiting Gov. Signature</span></td>
+            <td><span class="limit-tag">1,200W</span></td>
+            <td class="details-text">Passed both chambers May 12, 2026 and sent to the governor. Requires UL or equivalent certification. No interconnection agreement or utility fees required. One of the more streamlined bills in the country.</td>
+            <td>TBD</td>
+          </tr>
+          <tr data-status="pending">
+            <td><div class="state-name">Vermont</div><div class="bill-ref"><a href="https://legislature.vermont.gov/bill/status/2026/S.202" target="_blank" rel="noopener">S.202</a></div></td>
+            <td><span class="status status-pending">&#129505; Passed Senate</span></td>
+            <td><span class="limit-tag">1,200W</span></td>
+            <td class="details-text">Passed the Senate 29&ndash;0 in January 2026. House vote pending. Governor supportive. Vermont&apos;s high electricity rates make plug-in solar especially compelling for renters.</td>
+            <td>TBD</td>
+          </tr>
           <tr data-status="introduced">
             <td><div class="state-name">Illinois</div><div class="bill-ref"><a href="https://legiscan.com/IL/text/SB3104/2025" target="_blank" rel="noopener">SB 3104</a></div></td>
             <td><span class="status status-introduced">&#128309; Senate Floor Pending</span></td>
             <td><span class="limit-tag">TBD</span></td>
             <td class="details-text">Introduced January 2026 by Sen. Rachel Ventura. Companion bill HB 4371 also active. SB 3104 has cleared committee and is heading to a full Senate floor vote.</td>
+            <td>TBD</td>
+          </tr>
+          <tr data-status="introduced">
+            <td><div class="state-name">Minnesota</div><div class="bill-ref"><a href="https://www.house.mn.gov/sessiondaily/Story/18898" target="_blank" rel="noopener">HF 3555</a></div></td>
+            <td><span class="status status-introduced">&#128309; Bill Introduced</span></td>
+            <td><span class="limit-tag">1,200W</span></td>
+            <td class="details-text">Introduced February 2026, referred to the Energy Finance and Policy Committee. Would allow plug-in solar without utility interconnection notice or fees. Bipartisan support.</td>
+            <td>TBD</td>
+          </tr>
+          <tr data-status="introduced">
+            <td><div class="state-name">Michigan</div><div class="bill-ref"><a href="https://housedems.com/snyder-access-residential-solar/" target="_blank" rel="noopener">HB 5764</a></div></td>
+            <td><span class="status status-introduced">&#128309; Bill Introduced</span></td>
+            <td><span class="limit-tag">1,200W</span></td>
+            <td class="details-text">Introduced March 2026 by Rep. Will Snyder. Bipartisan bill to allow plug-in solar without interconnection agreements. Michigan&apos;s high utility costs have made this a popular cause.</td>
+            <td>TBD</td>
+          </tr>
+          <tr data-status="introduced">
+            <td><div class="state-name">New Jersey</div><div class="bill-ref">2026 Session</div></td>
+            <td><span class="status status-introduced">&#128309; Advancing</span></td>
+            <td><span class="limit-tag">1,200W</span></td>
+            <td class="details-text">Multiple plug-in solar bills advancing in the legislature. Considered one of the more likely states to pass legislation in 2026, given the state&apos;s existing solar-friendly policies and dense renter population.</td>
             <td>TBD</td>
           </tr>
           <tr data-status="legal">
@@ -200,7 +262,7 @@
             <td>&mdash;</td>
           </tr>
           <tr data-status="gray">
-            <td><div class="state-name">All Other States</div><div class="bill-ref">42 states</div></td>
+            <td><div class="state-name">All Other States</div><div class="bill-ref">35 states</div></td>
             <td><span class="status status-gray">&#11036; Gray Area</span></td>
             <td>&mdash;</td>
             <td class="details-text">No state law specifically addresses plug-in or balcony solar. Your situation depends on your utility&apos;s interconnection rules. Review your utility&apos;s requirements for small generating facilities before installing.</td>
