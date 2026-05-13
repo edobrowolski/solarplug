@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plug-In Solar Blog &mdash; Guides, News &amp; State Laws | YourSolarPlug</title>
+  <meta name="description" content="Plain-English guides on plug-in and balcony solar. Savings math, state legislation updates, product reviews, and honest takes on the market." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://yoursolarplug.com/blog/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yoursolarplug.com/blog/" />
+  <meta property="og:title" content="Plug-In Solar Blog &mdash; YourSolarPlug" />
+  <meta property="og:description" content="Plain-English guides on plug-in and balcony solar. Savings math, state laws, product reviews, and honest takes." />
+  <meta property="og:image" content="https://yoursolarplug.com/og-image.png" />
+  <style>
+    :root { --sun:#F5A623; --sun-dark:#D4881A; --navy:#1A2B3C; --slate:#4A5568; --light:#F7F9FC; --white:#FFFFFF; --border:#E2E8F0; --radius:10px; --shadow:0 2px 12px rgba(0,0,0,0.08); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--navy); background:var(--white); line-height:1.6; }
+    nav { background:var(--white); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:100; }
+    .nav-inner { max-width:1100px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:60px; }
+    .logo { font-size:1.2rem; font-weight:700; color:var(--navy); text-decoration:none; }
+    .logo span { color:var(--sun); }
+    .nav-links { display:flex; gap:28px; list-style:none; }
+    .nav-links a { text-decoration:none; color:var(--slate); font-size:0.95rem; font-weight:500; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--sun-dark); }
+    .nav-links a.active { color:var(--sun-dark); font-weight:700; }
+    .nav-cta { background:var(--sun); color:var(--white) !important; padding:8px 18px; border-radius:6px; font-weight:600 !important; }
+    .nav-cta:hover { background:var(--sun-dark); color:var(--white) !important; }
+    .hamburger { display:none; background:none; border:none; font-size:1.5rem; color:var(--navy); cursor:pointer; padding:4px 8px; line-height:1; }
+    @media (max-width:900px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; flex-direction:column; position:absolute; top:60px; left:0; right:0; background:var(--white); border-bottom:1px solid var(--border); padding:8px 0; gap:0; z-index:200; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+      .nav-links.open { display:flex; }
+      .nav-links li { border-bottom:1px solid var(--border); }
+      .nav-links li:last-child { border-bottom:none; }
+      .nav-links a { display:block; padding:14px 24px; }
+    }
+    .page-hero { background:linear-gradient(135deg,#1A2B3C 0%,#2C4A6E 100%); color:var(--white); padding:56px 24px 48px; }
+    .page-hero .container { max-width:1100px; margin:0 auto; }
+    .section-label { font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--sun); margin-bottom:12px; }
+    .page-hero h1 { font-size:clamp(1.8rem,4vw,2.6rem); font-weight:800; margin-bottom:12px; }
+    .page-hero p { font-size:1.05rem; color:rgba(255,255,255,0.72); max-width:520px; }
+    .blog-section { padding:60px 24px 80px; }
+    .container { max-width:1100px; margin:0 auto; }
+    .post-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:28px; }
+    .post-card { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:32px; box-shadow:var(--shadow); display:flex; flex-direction:column; transition:box-shadow 0.2s; }
+    .post-card:hover { box-shadow:0 6px 24px rgba(0,0,0,0.12); }
+    .post-tag { display:inline-block; background:#EEF2FF; color:#3730A3; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; padding:3px 10px; border-radius:20px; margin-bottom:14px; }
+    .post-card h2 { font-size:1.15rem; font-weight:800; margin-bottom:10px; line-height:1.3; }
+    .post-card h2 a { color:var(--navy); text-decoration:none; }
+    .post-card h2 a:hover { color:var(--sun-dark); }
+    .post-card p { font-size:0.92rem; color:var(--slate); flex:1; margin-bottom:20px; line-height:1.65; }
+    .post-meta { font-size:0.8rem; color:#9CA3AF; display:flex; gap:12px; margin-bottom:14px; }
+    .read-more { display:inline-block; color:var(--sun-dark); font-weight:700; font-size:0.9rem; text-decoration:none; }
+    .read-more:hover { text-decoration:underline; }
+    .coming-soon { background:var(--light); border:2px dashed var(--border); }
+    .coming-soon h2 { color:var(--slate); }
+    .coming-tag { display:inline-block; background:#F5F5F5; color:#9CA3AF; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; padding:3px 10px; border-radius:20px; margin-bottom:14px; }
+    footer { background:var(--navy); color:rgba(255,255,255,0.5); text-align:center; padding:32px 24px; font-size:0.85rem; }
+    footer a { color:rgba(255,255,255,0.6); text-decoration:none; margin:0 10px; }
+    footer a:hover { color:var(--sun); }
+    .footer-logo { font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:10px; }
+    .footer-logo span { color:var(--sun); }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/index.html" class="logo">Your<span>Solar</span>Plug</a>
+    <ul class="nav-links">
+      <li><a href="/how-it-works.html">How It Works</a></li>
+      <li><a href="/state-tracker.html">Is It Legal?</a></li>
+      <li><a href="/kit.html">Products</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+      <li><a href="/index.html#newsletter-bottom" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="section-label">The YourSolarPlug Blog</div>
+    <h1>Guides, news &amp; honest takes on plug-in solar</h1>
+    <p>Plain-English articles on how balcony solar works, what the laws actually say, and whether it makes sense for your situation.</p>
+  </div>
+</div>
+
+<div class="blog-section">
+  <div class="container">
+    <div class="post-grid">
+
+      <div class="post-card">
+        <span class="post-tag">Buying Guide</span>
+        <div class="post-meta">
+          <span>May 12, 2026</span>
+          <span>8 min read</span>
+        </div>
+        <h2><a href="/blog/is-balcony-solar-worth-it.html">Is Balcony Solar Worth It in 2026? The Honest Answer</a></h2>
+        <p>The math is real &mdash; but it depends on your electricity rate, your sun exposure, and your situation. We run the numbers both ways and give you a straight answer.</p>
+        <a href="/blog/is-balcony-solar-worth-it.html" class="read-more">Read article &rarr;</a>
+      </div>
+
+      <div class="post-card coming-soon">
+        <span class="coming-tag">Coming Soon</span>
+        <div class="post-meta"><span>&nbsp;</span></div>
+        <h2>Plug-In Solar for Renters: What Your Landlord Can Actually Say</h2>
+        <p>State laws are shifting the balance toward renters. Here is what landlords can and cannot do &mdash; and how to have the conversation.</p>
+      </div>
+
+      <div class="post-card coming-soon">
+        <span class="coming-tag">Coming Soon</span>
+        <div class="post-meta"><span>&nbsp;</span></div>
+        <h2>APsystems EZ1 Review: The Most Popular Plug-In Inverter in the World</h2>
+        <p>We dig into specs, real-world output, the WiFi monitoring app, and who this inverter is and is not right for.</p>
+      </div>
+
+      <div class="post-card coming-soon">
+        <span class="coming-tag">Coming Soon</span>
+        <div class="post-meta"><span>&nbsp;</span></div>
+        <h2>Balcony Solar in California: What SB 868 Means for Renters</h2>
+        <p>California&rsquo;s plug-in solar bill is moving through the legislature. Here is what it says, what changes if it passes, and what you can do right now.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Your<span>Solar</span>Plug</div>
+  <div style="margin-bottom:12px;">
+    <a href="/index.html">Home</a>
+    <a href="/how-it-works.html">How It Works</a>
+    <a href="/state-tracker.html">State Tracker</a>
+    <a href="/kit.html">Products</a>
+    <a href="/blog/">Blog</a>
+  </div>
+  <p>&copy; 2026 YourSolarPlug.com &mdash; Information is provided for educational purposes only.<br/>Laws change. Always verify current status with your state legislature or a local attorney.</p>
+  <p style="margin-top:10px;font-size:0.78rem;">Some links on this site are affiliate links. We may earn a small commission at no extra cost to you.</p>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var hamburger = document.getElementById("hamburger");
+    var navLinks = document.querySelector(".nav-links");
+    if (hamburger && navLinks) {
+      hamburger.addEventListener("click", function() {
+        navLinks.classList.toggle("open");
+        hamburger.innerHTML = navLinks.classList.contains("open") ? "&#10005;" : "&#9776;";
+      });
+      navLinks.querySelectorAll("a").forEach(function(a) {
+        a.addEventListener("click", function() { navLinks.classList.remove("open"); hamburger.innerHTML = "&#9776;"; });
+      });
+    }
+  });
+</script>
+</body>
+</html>
