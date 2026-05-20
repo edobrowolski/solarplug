@@ -25,6 +25,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yoursolarplug.com/about.html</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://yoursolarplug.com/blog/</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>

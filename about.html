@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About YourSolarPlug &mdash; Who We Are &amp; Why We Built This</title>
+  <meta name="description" content="YourSolarPlug is an independent educational resource on plug-in and balcony solar in the US. Here is who runs it and why." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://yoursolarplug.com/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yoursolarplug.com/about.html" />
+  <meta property="og:title" content="About YourSolarPlug" />
+  <meta property="og:description" content="An independent educational resource on plug-in and balcony solar. Here is who runs it and why." />
+  <meta property="og:image" content="https://yoursolarplug.com/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About YourSolarPlug",
+    "url": "https://yoursolarplug.com/about.html",
+    "description": "YourSolarPlug is an independent educational resource on plug-in and balcony solar in the US.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "YourSolarPlug",
+      "url": "https://yoursolarplug.com"
+    }
+  }
+  </script>
+  <style>
+    :root { --sun:#F5A623; --sun-dark:#D4881A; --navy:#1A2B3C; --slate:#4A5568; --light:#F7F9FC; --white:#FFFFFF; --border:#E2E8F0; --radius:10px; --shadow:0 2px 12px rgba(0,0,0,0.08); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--navy); background:var(--white); line-height:1.7; }
+    nav { background:var(--white); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:100; }
+    .nav-inner { max-width:1100px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:60px; }
+    .logo { font-size:1.2rem; font-weight:700; color:var(--navy); text-decoration:none; }
+    .logo span { color:var(--sun); }
+    .nav-links { display:flex; gap:28px; list-style:none; }
+    .nav-links a { text-decoration:none; color:var(--slate); font-size:0.95rem; font-weight:500; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--sun-dark); }
+    .nav-cta { background:var(--sun); color:var(--white) !important; padding:8px 18px; border-radius:6px; font-weight:600 !important; }
+    .nav-cta:hover { background:var(--sun-dark); color:var(--white) !important; }
+    .hamburger { display:none; background:none; border:none; font-size:1.5rem; color:var(--navy); cursor:pointer; padding:4px 8px; line-height:1; }
+    @media (max-width:900px) {
+      .hamburger { display:block; }
+      .nav-links { display:none; flex-direction:column; position:absolute; top:60px; left:0; right:0; background:var(--white); border-bottom:1px solid var(--border); padding:8px 0; gap:0; z-index:200; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+      .nav-links.open { display:flex; }
+      .nav-links li { border-bottom:1px solid var(--border); }
+      .nav-links li:last-child { border-bottom:none; }
+      .nav-links a { display:block; padding:14px 24px; }
+    }
+    .page-hero { background:linear-gradient(135deg,#1A2B3C 0%,#2C4A6E 100%); color:var(--white); padding:56px 24px 48px; }
+    .page-hero .container { max-width:760px; margin:0 auto; }
+    .section-label { font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--sun); margin-bottom:12px; }
+    .page-hero h1 { font-size:clamp(1.8rem,4vw,2.4rem); font-weight:800; margin-bottom:14px; }
+    .page-hero p { font-size:1.05rem; color:rgba(255,255,255,0.72); max-width:560px; }
+    .content { max-width:760px; margin:0 auto; padding:56px 24px 80px; }
+    .content h2 { font-size:1.3rem; font-weight:800; margin:44px 0 14px; color:var(--navy); }
+    .content h2:first-of-type { margin-top:0; }
+    .content p { font-size:1rem; color:var(--slate); margin-bottom:18px; line-height:1.75; }
+    .content a { color:var(--sun-dark); text-decoration:none; border-bottom:1px solid rgba(212,136,26,0.3); }
+    .content a:hover { border-color:var(--sun-dark); }
+    .disclosure { background:var(--light); border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; margin:40px 0; }
+    .disclosure h2 { margin-top:0; font-size:1.1rem; }
+    .disclosure p { margin-bottom:12px; }
+    .disclosure p:last-child { margin-bottom:0; }
+    .contact-box { background:var(--navy); color:var(--white); border-radius:var(--radius); padding:32px; margin-top:48px; text-align:center; }
+    .contact-box h2 { color:var(--white); margin-top:0; font-size:1.2rem; margin-bottom:10px; }
+    .contact-box p { color:rgba(255,255,255,0.7); margin-bottom:20px; font-size:0.95rem; }
+    .contact-box a { color:var(--sun); border-bottom:1px solid rgba(245,166,35,0.4); font-weight:600; }
+    footer { background:var(--navy); color:rgba(255,255,255,0.5); text-align:center; padding:32px 24px; font-size:0.85rem; }
+    footer a { color:rgba(255,255,255,0.6); text-decoration:none; margin:0 10px; }
+    footer a:hover { color:var(--sun); }
+    .footer-logo { font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:10px; }
+    .footer-logo span { color:var(--sun); }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/index.html" class="logo">Your<span>Solar</span>Plug</a>
+    <ul class="nav-links">
+      <li><a href="/how-it-works.html">How It Works</a></li>
+      <li><a href="/state-tracker.html">Is It Legal?</a></li>
+      <li><a href="/kit.html">Products</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/index.html#newsletter-bottom" class="nav-cta">Newsletter</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="section-label">About</div>
+    <h1>Why this site exists</h1>
+    <p>YourSolarPlug is an independent educational resource on plug-in and balcony solar in the US. No installation company. No utility. Just a site trying to make this technology easier to understand and access.</p>
+  </div>
+</div>
+
+<div class="content">
+
+  <h2>The backstory</h2>
+
+  <p>I first came across plug-in solar watching it take off in Europe &mdash; Germany especially, where over a million of these systems are running on apartment balconies. The concept was simple and the results were real: renters and homeowners generating meaningful electricity from a setup that costs a few hundred dollars and takes an afternoon to install.</p>
+
+  <p>In the US, the technology existed but the awareness did not. Most people had never heard of it. The ones who had often ran into conflicting information about legality, utility rules, and whether it was actually worth the money. The legislative picture was just starting to move.</p>
+
+  <p>I built YourSolarPlug to be the resource I wished existed when I started looking into this: honest, specific, and updated as things change. Not a solar company trying to sell you an installation. Not a generic energy blog. A site focused specifically on plug-in and balcony solar, written for people who are actually trying to figure out if and how to do this.</p>
+
+  <h2>What we cover</h2>
+
+  <p>The site has four main sections. <a href="/how-it-works.html">How It Works</a> is a plain-English explainer on the technology, the components, the savings math, and the honest limitations. <a href="/state-tracker.html">Is It Legal?</a> tracks plug-in solar legislation across all 50 states, updated as bills move. <a href="/kit.html">Products</a> covers what is actually available to buy right now, with honest notes on each. And the <a href="/blog/">blog</a> goes deeper on specific questions &mdash; whether it is worth it for your situation, what renters can actually do, and how the laws work in practice.</p>
+
+  <p>I update the state tracker as legislation moves, which in 2026 has meant nearly weekly changes. Six states have now signed plug-in solar laws in the past year. It is a fast-moving space and the site tries to reflect that.</p>
+
+  <h2>Who is behind this</h2>
+
+  <p>My name is Evan. I am based in the San Francisco Bay Area and run a small independent consultancy. I have been following the clean energy space for years, with a particular interest in the access gap: rooftop solar has been transformative for homeowners who can afford the upfront cost and own their roof, but it has done almost nothing for the roughly 40 million renter households in the US. Plug-in solar is one of the few technologies that actually changes that equation.</p>
+
+  <p>YourSolarPlug is an independent project, not affiliated with any solar company, installer, or utility. I do not sell systems or take payments for recommendations. The site earns a small commission through affiliate links when you purchase products through links here &mdash; this is disclosed on every page. It does not affect what I recommend or how I cover the space.</p>
+
+  <div class="disclosure">
+    <h2>Affiliate disclosure</h2>
+    <p>Some links on YourSolarPlug are affiliate links. If you click a link and make a purchase, we may earn a small commission at no extra cost to you. This helps support the site and keeps it free.</p>
+    <p>Affiliate relationships we currently have: Amazon Associates (for panel and hardware links), APsystems (for the EZ1 microinverter), and EcoFlow (pending approval). These relationships did not influence which products appear on the site &mdash; I recommend what I actually think is worth recommending.</p>
+    <p>We do not accept sponsored posts, paid placements, or payment to feature specific products. If that changes, it will be disclosed clearly.</p>
+  </div>
+
+  <h2>A note on accuracy</h2>
+
+  <p>Plug-in solar legislation is changing fast. I do my best to keep the state tracker current, but laws can pass, be amended, or be delayed between updates. Always verify the current status with your state legislature or a licensed attorney before making decisions based on information here. The site is educational, not legal advice.</p>
+
+  <p>If you spot an error, an outdated status, or something I have gotten wrong, I genuinely want to know. Use the contact below.</p>
+
+  <div class="contact-box">
+    <h2>Get in touch</h2>
+    <p>Questions, corrections, or just want to share how your system is working out? The best way to reach me is through the newsletter &mdash; hit reply on any email and it comes straight to me.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">Your<span>Solar</span>Plug</div>
+  <div style="margin-bottom:12px;">
+    <a href="/index.html">Home</a>
+    <a href="/how-it-works.html">How It Works</a>
+    <a href="/state-tracker.html">State Tracker</a>
+    <a href="/kit.html">Products</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about.html">About</a>
+  </div>
+  <p>&copy; 2026 YourSolarPlug.com &mdash; Information is provided for educational purposes only.<br/>Laws change. Always verify current status with your state legislature or a local attorney.</p>
+  <p style="margin-top:10px;font-size:0.78rem;">Some links on this site are affiliate links. We may earn a small commission at no extra cost to you.</p>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var hamburger = document.getElementById("hamburger");
+    var navLinks = document.querySelector(".nav-links");
+    if (hamburger && navLinks) {
+      hamburger.addEventListener("click", function() {
+        navLinks.classList.toggle("open");
+        hamburger.innerHTML = navLinks.classList.contains("open") ? "&#10005;" : "&#9776;";
+      });
+      navLinks.querySelectorAll("a").forEach(function(a) {
+        a.addEventListener("click", function() { navLinks.classList.remove("open"); hamburger.innerHTML = "&#9776;"; });
+      });
+    }
+  });
+</script>
+</body>
+</html>
